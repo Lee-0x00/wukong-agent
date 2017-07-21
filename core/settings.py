@@ -60,7 +60,7 @@ talscan_windows_config = {
 			"Accept": "application/json, text/javascript, */*; q=0.01",
 			"RequestValidated": "true"
 	},
-	"nessus_url" : "https://scan02.secfuture.com:12345" ,
+	"nessus_url" : "https://xx" ,
 	"nessus_name" : "xx" ,
 	"nessus_pass" : "xx" ,
 	"rsas_host" : "1.1.1.1" ,
@@ -109,7 +109,7 @@ talscan_linux_config = {
 			"Accept": "application/json, text/javascript, */*; q=0.01",
 			"RequestValidated": "true"
 	},
-	"nessus_url" : "https://scan02.secfuture.com:12345" ,
+	"nessus_url" : "https://xx" ,
 	"nessus_name" : "xx" ,
 	"nessus_pass" : "xx" ,
 	"rsas_host" : "1.1.1.1" ,
