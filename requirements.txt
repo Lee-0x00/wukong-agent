@@ -1,0 +1,17 @@
+requests
+dnspython
+gevent
+IPy
+html5lib
+lxml
+poster
+psutil
+pygeoip
+PyPDF2
+redis
+reportlab
+selenium
+splinter
+xhtml2pdf
+bs4
+pyquery

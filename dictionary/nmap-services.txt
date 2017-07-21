@@ -1,0 +1,1829 @@
+tcpmux;1/tcp;0.001995;# TCP Port Service Multiplexer [rfc-1078]
+compressnet;2/tcp;0.000013;# Management Utility
+compressnet;3/tcp;0.001242;# Compression Process
+discard;9/tcp;0.003764;# sink null
+systat;11/tcp;0.000075;# Active Users
+qotd;17/tcp;0.002346;# Quote of the Day
+chargen;19/tcp;0.002559;# ttytst source Character Generator
+ftp-data;20/tcp;0.001079;# File Transfer [Default Data]
+ftp;21/tcp;0.197667;# File Transfer [Control]
+ssh;22/tcp;0.182286;# Secure Shell Login
+priv-mail;24/tcp;0.001154;# any private mail system
+smtp;25/tcp;0.131314;# Simple Mail Transfer
+rsftp;26/tcp;0.007991;# RSFTP
+nsw-fe;27/tcp;0.000138;# NSW User System FE
+msg-icp;29/tcp;0.000025;# MSG ICP
+msg-auth;31/tcp;0.000025;# MSG Authentication
+dsp;33/tcp;0.001016;# Display Support Protocol
+priv-print;35/tcp;0.000038;# any private printer server
+time;37/tcp;0.003161;# timserver
+rap;38/tcp;0.000025;# Route Access Protocol
+nameserver;42/tcp;0.000803;# Host Name Server
+whois;43/tcp;0.000314;# nicname
+mpm-flags;44/tcp;0.000025;# MPM FLAGS Protocol
+mpm;45/tcp;0.000050;# Message Processing Module [recv]
+ni-ftp;47/tcp;0.000075;# NI FTP
+auditd;48/tcp;0.000013;# Digital Audit Daemon
+tacacs;49/tcp;0.000665;# Login Host Protocol (TACACS)
+re-mail-ck;50/tcp;0.000050;# Remote Mail Checking Protocol
+la-maint;51/tcp;0.000038;# IMP Logical Address Maintenance
+xns-time;52/tcp;0.000063;# XNS Time Protocol
+domain;53/tcp;0.048463;# Domain Name Server
+xns-ch;54/tcp;0.000013;# XNS Clearinghouse
+isi-gl;55/tcp;0.000125;# ISI Graphics Language
+xns-auth;56/tcp;0.000013;# XNS Authentication
+priv-term;57/tcp;0.000125;# any private terminal access
+xns-mail;58/tcp;0.000025;# XNS Mail
+priv-file;59/tcp;0.000088;# any private file service
+tacacs-ds;65/tcp;0.000013;# TACACS-Database Service
+sqlnet;66/tcp;0.000075;# Oracle SQL*NET
+dhcps;67/tcp;0.000013;# DHCP/Bootstrap Protocol Server
+dhcpc;68/tcp;0.000063;# DHCP/Bootstrap Protocol Client
+tftp;69/tcp;0.000038;# Trivial File Transfer
+netrjs-1;71/tcp;0.000025;# Remote Job Service
+netrjs-2;72/tcp;0.000013;# Remote Job Service
+netrjs-3;73/tcp;0.000025;# Remote Job Service
+netrjs-4;74/tcp;0.000025;# Remote Job Service
+priv-dial;75/tcp;0.000063;# any private dial out service
+deos;76/tcp;0.000063;# Distributed External Object Store
+priv-rje;77/tcp;0.000113;# any private RJE service, netrjs
+http;80/tcp;0.484143;# World Wide Web HTTP
+hosts2-ns;81/tcp;0.012056;# HOSTS2 Name Server
+xfer;82/tcp;0.002923;# XFER Utility
+mit-ml-dev;83/tcp;0.000539;# MIT ML Device
+ctf;84/tcp;0.000276;# Common Trace Facility
+mit-ml-dev;85/tcp;0.000690;# MIT ML Device
+mfcobol;86/tcp;0.000138;# Micro Focus Cobol
+priv-term-l;87/tcp;0.000125;# any private terminal link, ttylink
+kerberos-sec;88/tcp;0.006072;# Kerberos (v5)
+su-mit-tg;89/tcp;0.000376;# SU/MIT Telnet Gateway
+dnsix;90/tcp;0.000652;# DNSIX Securit Attribute Token Map
+mit-dov;91/tcp;0.000063;# MIT Dover Spooler
+npp;92/tcp;0.000050;# Network Printing Protocol
+dcp;93/tcp;0.000025;# Device Control Protocol
+objcall;94/tcp;0.000025;# Tivoli Object Dispatcher
+supdup;95/tcp;0.000025;# BSD supdupd(8)
+dixie;96/tcp;0.000013;# DIXIE Protocol Specification
+swift-rvf;97/tcp;0.000038;# Swift Remote Virtural File Protocol
+metagram;99/tcp;0.000326;# Metagram Relay
+newacct;100/tcp;0.002133;# [unauthorized use]
+hostname;101/tcp;0.000063;# hostnames NIC Host Name Server
+iso-tsap;102/tcp;0.000138;# tsap ISO-TSAP Class 0
+gppitnp;103/tcp;0.000038;# Genesis Point-to-Point Trans Net, or x400 ISO Email
+acr-nema;104/tcp;0.000063;# ACR-NEMA Digital Imag. & Comm. 300
+pop3pw;106/tcp;0.005934;# Eudora compatible PW changer
+snagas;108/tcp;0.000013;# SNA Gateway Access Server
+pop2;109/tcp;0.000188;# PostOffice V.2
+pop3;110/tcp;0.077142;# PostOffice V.3
+rpcbind;111/tcp;0.030034;# portmapper, rpcbind
+mcidas;112/tcp;0.000050;# McIDAS Data Transmission Protocol
+ident;113/tcp;0.012370;# ident, tap, Authentication Service
+audionews;114/tcp;0.000025;# Audio News Multicast
+sftp;115/tcp;0.000025;# Simple File Transfer Protocol
+ansanotify;116/tcp;0.000013;# ANSA REX Notify
+uucp-path;117/tcp;0.000013;# UUCP Path Service
+sqlserv;118/tcp;0.000025;# SQL Services
+nntp;119/tcp;0.003262;# Network News Transfer Protocol
+ntp;123/tcp;0.000138;# Network Time Protocol
+ansatrader;124/tcp;0.000013;# ANSA REX Trader
+locus-map;125/tcp;0.000176;# Locus PC-Interface Net Map Ser
+locus-con;127/tcp;0.000113;# Locus PC-Interface Conn Server
+gss-xlicen;128/tcp;0.000013;# GSS X License Verification
+pwdgen;129/tcp;0.000025;# Password Generator Protocol
+cisco-fna;130/tcp;0.000013;# cisco FNATIVE
+cisco-sys;132/tcp;0.000013;# cisco SYSMAINT
+statsrv;133/tcp;0.000025;# Statistics Service
+msrpc;135/tcp;0.047798;# Microsoft RPC services
+profile;136/tcp;0.000025;# PROFILE Naming System
+netbios-ns;137/tcp;0.000038;# NETBIOS Name Service
+netbios-dgm;138/tcp;0.000025;# NETBIOS Datagram Service
+netbios-ssn;139/tcp;0.050809;# NETBIOS Session Service
+emfis-cntl;141/tcp;0.000013;# EMFIS Control Service
+bl-idm;142/tcp;0.000013;# Britton-Lee IDM
+imap;143/tcp;0.050420;# Interim Mail Access Protocol v2
+news;144/tcp;0.004981;# NewS window system
+cronus;148/tcp;0.000013;# CRONUS-SUPPORT
+aed-512;149/tcp;0.000013;# AED 512 Emulation Service
+knet-cmp;157/tcp;0.000113;# KNET/VM Command/Message Protocol
+pcmail-srv;158/tcp;0.000063;# PCMail Server
+snmptrap;162/tcp;0.000013;# snmp-trap
+cmip-man;163/tcp;0.000590;# CMIP/TCP Manager
+xdmcp;177/tcp;0.000025;# X Display Mgr. Control Proto
+bgp;179/tcp;0.010538;# Border Gateway Protocol
+ris;180/tcp;0.000038;# Intergraph
+audit;182/tcp;0.000038;# Unisys Audit SITP
+qft;189/tcp;0.000013;# Queued File Transport
+gacp;190/tcp;0.000013;# Gateway Access Control Protocol
+prospero;191/tcp;0.000013;# Prospero Directory Service
+osu-nms;192/tcp;0.000013;# OSU Network Monitoring System
+srmp;193/tcp;0.000025;# Spider Remote Monitoring Protocol
+irc;194/tcp;0.000038;# Internet Relay Chat
+dn6-smm-red;196/tcp;0.000025;# DNSIX Session Mgt Module Audit Redir
+smux;199/tcp;0.015945;# SNMP Unix Multiplexer
+src;200/tcp;0.000025;# IBM System Resource Controller
+at-rtmp;201/tcp;0.000038;# AppleTalk Routing Maintenance
+at-nbp;202/tcp;0.000025;# AppleTalk Name Binding
+at-echo;204/tcp;0.000025;# AppleTalk Echo
+at-5;205/tcp;0.000013;# AppleTalk Unused
+at-zis;206/tcp;0.000025;# AppleTalk Zone Information
+tam;209/tcp;0.000013;# Trivial Authenticated Mail Protocol
+z39.50;210/tcp;0.000125;# wais, ANSI Z39.50
+914c-g;211/tcp;0.000427;# Texas Instruments 914C/G Terminal
+anet;212/tcp;0.000364;# ATEXSSTR
+atls;216/tcp;0.000013;# Access Technology License Server
+dbase;217/tcp;0.000013;# dBASE Unix
+uarps;219/tcp;0.000063;# Unisys ARPs
+imap3;220/tcp;0.000113;# Interactive Mail Access Protocol v3
+fln-spx;221/tcp;0.000050;# Berkeley rlogind with SPX auth
+rsh-spx;222/tcp;0.000941;# Berkeley rshd with SPX auth
+cdc;223/tcp;0.000125;# Certificate Distribution Center
+fw1-secureremote;256/tcp;0.000163;# also "rap"
+fw1-mc-fwmodule;257/tcp;0.000100;# FW1 management console for communication w/modules and also secure electronic transaction (set) port
+fw1-mc-gui;258/tcp;0.000013;# also yak winsock personal chat
+esro-gen;259/tcp;0.000201;# efficient short remote operations
+nsiiops;261/tcp;0.000025;# iiop name service over tls/ssl
+td-service;267/tcp;0.000013;# Tobit David Service Layer
+td-replica;268/tcp;0.000050;# Tobit David Replica
+novastorbakcup;308/tcp;0.000025;# novastor backup
+asip-webadmin;311/tcp;0.001857;# appleshare ip webadmin
+rtsps;322/tcp;0.000013;# RTSPS
+texar;333/tcp;0.000113;# Texar Security Port
+zserv;346/tcp;0.000013;# Zebra server
+matip-type-a;350/tcp;0.000025;# MATIP Type A
+matip-type-b;351/tcp;0.000013;# MATIP Type B or bhoetty also safetp
+dtag-ste-sb;352/tcp;0.000013;# DTAG, or bhoedap4
+srssend;362/tcp;0.000025;# SRS Send
+legent-1;373/tcp;0.000013;# Legent Corporation (now Computer Associates Intl.)
+is99s;380/tcp;0.000013;# TIA/EIA/IS-99 modem server
+hp-alarm-mgr;383/tcp;0.000013;# hp performance data alarm manager
+unidata-ldm;388/tcp;0.000088;# Unidata LDM Version 4
+ldap;389/tcp;0.004717;# Lightweight Directory Access Protocol
+synotics-relay;391/tcp;0.000013;# SynOptics SNMP Relay Port
+synotics-broker;392/tcp;0.000013;# SynOptics Port Broker Port
+mptn;397/tcp;0.000025;# Multi Protocol Trans. Net.
+iso-tsap-c2;399/tcp;0.000025;# ISO-TSAP Class 2
+work-sol;400/tcp;0.000075;# Workstation Solutions
+ups;401/tcp;0.000025;# Uninterruptible Power Supply
+genie;402/tcp;0.000038;# Genie Protocol
+imsp;406/tcp;0.000163;# Interactive Mail Support Protocol
+prm-sm;408/tcp;0.000013;# Prospero Resource Manager Sys. Man.
+decladebug;410/tcp;0.000025;# DECLadebug Remote Debug Protocol
+rmt;411/tcp;0.000088;# Remote MT Protocol
+synoptics-trap;412/tcp;0.000025;# Trap Convention Port
+onmux;417/tcp;0.000226;# Meeting maker
+opc-job-start;423/tcp;0.000013;# IBM Operations Planning and Control Start
+svrloc;427/tcp;0.005382;# Server Location
+https;443/tcp;0.208669;# secure http (SSL)
+snpp;444/tcp;0.004466;# Simple Network Paging Protocol
+microsoft-ds;445/tcp;0.056944;# SMB directly over IP
+ddm-ssl;448/tcp;0.000050;# ddm-byte
+as-servermap;449/tcp;0.000063;# AS Server Mapper
+sfs-smp-net;451/tcp;0.000013;# Cray Network Semaphore server
+sfs-config;452/tcp;0.000013;# Cray SFS config server
+appleqtc;458/tcp;0.000314;# apple quick time
+kpasswd5;464/tcp;0.001192;# Kerberos (v5)
+smtps;465/tcp;0.013888;# smtp protocol over TLS/SSL (was ssmtp)
+powerburst;485/tcp;0.000013;# Air Soft Power Burst
+saft;487/tcp;0.000013;# saft Simple Asynchronous File Transfer
+ticf-1;492/tcp;0.000050;# Transport Independent Convergence for FNA
+ticf-2;493/tcp;0.000025;# Transport Independent Convergence for FNA
+fcp;510/tcp;0.000063;# FirstClass Protocol
+exec;512/tcp;0.000841;# BSD rexecd(8)
+login;513/tcp;0.005595;# BSD rlogind(8)
+shell;514/tcp;0.011078;# BSD rshd(8)
+printer;515/tcp;0.007214;# spooler (lpd)
+ntalk;518/tcp;0.000013;# (talkd)
+timed;525/tcp;0.000063;# timeserver
+tempo;526/tcp;0.000013;# newdate
+custix;528/tcp;0.000013;# Customer IXChange
+courier;530/tcp;0.000013;# rpc
+netwall;533/tcp;0.000013;# for emergency broadcasts
+uucp;540/tcp;0.000138;# uucpd
+klogin;543/tcp;0.005282;# Kerberos (v4/v5)
+kshell;544/tcp;0.005269;# krcmd Kerberos (v4/v5)
+ekshell;545/tcp;0.000276;# Kerberos encrypted remote shell -kfall
+afp;548/tcp;0.012395;# AFP over TCP
+rtsp;554/tcp;0.008104;# Real Time Stream Control Protocol
+remotefs;556/tcp;0.000125;# rfs, rfs_server, Brunhoff remote filesystem
+rmonitor;560/tcp;0.000038;# rmonitord
+9pfs;564/tcp;0.000013;# plan 9 file service
+ms-shuttle;568/tcp;0.000025;# Microsoft shuttle
+ms-rome;569/tcp;0.000013;# Microsoft rome
+meter;570/tcp;0.000013;# demon
+umeter;571/tcp;0.000013;# udemon
+philips-vc;583/tcp;0.000013;# Philips Video-Conferencing
+http-alt;591/tcp;0.000075;# FileMaker, Inc. - HTTP Alternate
+http-rpc-epmap;593/tcp;0.001242;# HTTP RPC Ep Map
+sco-websrvrmg3;598/tcp;0.000013;# SCO Web Server Manager 3
+acp;599/tcp;0.000013;# Aeolon Core Protocol
+ipcserver;600/tcp;0.000100;# Sun IPC server
+syslog-conn;601/tcp;0.000025;# Reliable Syslog Service
+xmlrpc-beep;602/tcp;0.000100;# XML-RPC over BEEP
+mnotes;603/tcp;0.000063;# CommonTime Mnotes PDA Synchronization
+tunnel;604/tcp;0.000025;# TUNNEL
+soap-beep;605/tcp;0.000050;# SOAP over BEEP
+urm;606/tcp;0.000088;# Cray Unified Resource Manager
+sift-uft;608/tcp;0.000025;# Sender-Initiated/Unsolicited File Transfer
+hmmp-ind;612/tcp;0.000013;# HMMP Indication
+hmmp-op;613/tcp;0.000013;# HMMP Operation
+sshell;614/tcp;0.000013;# SSLshell
+sco-inetmgr;615/tcp;0.000063;# Internet Configuration Manager
+sco-sysmgr;616/tcp;0.000289;# SCO System Administration Server
+sco-dtmgr;617/tcp;0.000226;# SCO Desktop Administration Server or Arkeia (www.arkeia.com) backup software
+dei-icda;618/tcp;0.000013;# DEI-ICDA
+compaq-evm;619/tcp;0.000025;# Compaq EVM
+sco-websrvrmgr;620/tcp;0.000063;# SCO WebServer Manager
+escp-ip;621/tcp;0.000088;# ESCP
+collaborator;622/tcp;0.000038;# Collaborator
+oob-ws-http;623/tcp;0.000151;# DMTF out-of-band web services management protocol
+cryptoadmin;624/tcp;0.000038;# Crypto Admin
+apple-xsrvr-admin;625/tcp;0.001869;# Apple Mac Xserver admin
+apple-imap-admin;626/tcp;0.000025;# Apple IMAP mail admin
+passgo-tivoli;627/tcp;0.000050;# PassGo Tivoli
+qmqp;628/tcp;0.000038;# Qmail Quick Mail Queueing
+3com-amp3;629/tcp;0.000063;# 3Com AMP3
+rda;630/tcp;0.000050;# RDA
+ipp;631/tcp;0.006160;# Internet Printing Protocol -- for one implementation see http://www.cups.org (Common UNIX Printing System)
+servstat;633/tcp;0.000038;# Service Status update (Sterling Software)
+rlzdbase;635/tcp;0.000075;# RLZ DBase
+ldapssl;636/tcp;0.002083;# LDAP over SSL
+msdp;639/tcp;0.000151;# MSDP
+esro-emsdp;642/tcp;0.000075;# ESRO-EMSDP V1.3
+sanity;643/tcp;0.000013;# SANity
+pssc;645/tcp;0.000025;# PSSC
+ldp;646/tcp;0.006549;# Label Distribution
+dhcp-failover;647/tcp;0.000050;# DHCP Failover
+rrp;648/tcp;0.000577;# Registry Registrar Protocol (RRP)
+cadview-3d;649/tcp;0.000063;# Cadview-3d - streaming 3d models over the internet
+ieee-mms;651/tcp;0.000050;# IEEE MMS
+hello-port;652/tcp;0.000013;# HELLO_PORT
+repscmd;653/tcp;0.000063;# RepCmd
+aodv;654/tcp;0.000038;# AODV
+tinc;655/tcp;0.000100;# TINC
+spmp;656/tcp;0.000038;# SPMP
+rmc;657/tcp;0.000113;# RMC
+tenfold;658/tcp;0.000050;# TenFold
+mac-srvr-admin;660/tcp;0.000100;# MacOS Server Admin
+hap;661/tcp;0.000050;# HAP
+pftp;662/tcp;0.000013;# PFTP
+purenoise;663/tcp;0.000050;# PureNoise
+sun-dr;665/tcp;0.000063;# Sun DR
+doom;666/tcp;0.000289;# Id Software Doom
+disclose;667/tcp;0.000238;# campaign contribution disclosures - SDR Technologies
+mecomm;668/tcp;0.000213;# MeComm
+meregister;669/tcp;0.000088;# MeRegister
+vacdsm-sws;670/tcp;0.000038;# VACDSM-SWS
+vpps-qua;672/tcp;0.000025;# VPPS-QUA
+cimplex;673/tcp;0.000050;# CIMPLEX
+acap;674/tcp;0.000113;# ACAP server of Communigate (www.stalker.com)
+dctp;675/tcp;0.000038;# DCTP
+vpps-via;676/tcp;0.000038;# VPPS Via
+vpp;677/tcp;0.000025;# Virtual Presence Protocol
+ggf-ncp;678/tcp;0.000075;# GNU Generation Foundation NCP
+xfr;682/tcp;0.000063;# XFR
+corba-iiop-ssl;684/tcp;0.000113;# CORBA IIOP SSL
+mdc-portmapper;685/tcp;0.000038;# MDC Port Mapper
+hcp-wismar;686/tcp;0.000025;# Hardware Control Protocol Wismar
+realm-rusd;688/tcp;0.000025;# ApplianceWare managment protocol
+nmap;689/tcp;0.000038;# NMAP
+vatp;690/tcp;0.000088;# Velazquez Application Transfer Protocol
+resvc;691/tcp;0.000376;# The Microsoft Exchange 2000 Server Routing Service
+hyperwave-isp;692/tcp;0.000038;# Hyperwave-ISP
+ieee-mms-ssl;695/tcp;0.000063;# IEEE-MMS-SSL
+rushd;696/tcp;0.000050;# RUSHD
+uuidgen;697/tcp;0.000025;# UUIDGEN
+olsr;698/tcp;0.000025;# OLSR
+accessnetwork;699/tcp;0.000025;# Access Network
+epp;700/tcp;0.000289;# Extensible Provisioning Protocol
+lmp;701/tcp;0.000151;# Link Management Protocol (LMP)
+iris-beep;702/tcp;0.000050;# IRIS over BEEP
+elcsd;704/tcp;0.000038;# errlog copy/server daemon
+agentx;705/tcp;0.000414;# AgentX
+silc;706/tcp;0.000075;# Secure Internet Live Conferencing -- http://silcnet.org
+borland-dsj;707/tcp;0.000063;# Borland DSJ
+entrustmanager;709/tcp;0.000125;# EntrustManager - NorTel DES auth network see 389/tcp
+entrustmanager;709/udp;0.000741;# EntrustManager - NorTel DES auth network see 389/tcp
+entrust-ash;710/tcp;0.000151;# Entrust Administration Service Handler
+cisco-tdp;711/tcp;0.000401;# Cisco TDP
+tbrpf;712/tcp;0.000025;# TBRPF
+iris-xpc;713/tcp;0.000125;# IRIS over XPC
+iris-xpcs;714/tcp;0.000226;# IRIS over XPCS
+iris-lwz;715/tcp;0.000088;# IRIS-LWZ
+omfs;723/tcp;0.000038;# OpenMosix File System
+netviewdm1;729/tcp;0.000100;# IBM NetView DM/6000 Server/Client
+netviewdm2;730/tcp;0.000100;# IBM NetView DM/6000 send/tcp
+netviewdm2;730/udp;0.000758;# IBM NetView DM/6000 send/tcp
+netviewdm3;731/tcp;0.000100;# IBM NetView DM/6000 receive/tcp
+netviewdm3;731/udp;0.000741;# IBM NetView DM/6000 receive/tcp
+netcp;740/tcp;0.000088;# NETscout Control Protocol
+netrcs;742/tcp;0.000013;# Network based Rev. Cont. Sys.
+flexlm;744/tcp;0.000013;# Flexible License Manager
+fujitsu-dev;747/tcp;0.000025;# Fujitsu Device Control
+ris-cm;748/tcp;0.000113;# Russell Info Sci Calendar Manager
+kerberos-adm;749/tcp;0.000326;# Kerberos 5 admin/changepw
+kerberos;750/tcp;0.000063;# kdc Kerberos (v4)
+kerberos_master;751/tcp;0.000038;# Kerberos `kadmin' (v4)
+krb_prop;754/tcp;0.000088;# kerberos/v5 server propagation
+krbupdate;760/tcp;0.000050;# kreg Kerberos (v4) registration
+kpasswd;761/tcp;0.000050;# kpwd Kerberos (v4) "passwd"
+phonebook;767/tcp;0.000013;# phone
+multiling-http;777/tcp;0.000226;# Multiling HTTP
+hp-collector;781/tcp;0.000013;# hp performance data collector
+hp-managed-node;782/tcp;0.000100;# hp performance data managed node
+spamassassin;783/tcp;0.000163;# Apache SpamAssassin spamd
+controlit;799/tcp;0.000038;# Remotely possible
+ccproxy-http;808/tcp;0.002296;# CCProxy HTTP/Gopher/FTP (over HTTP) proxy
+fcp-udp;810/tcp;0.000063;# FCP
+pkix-3-ca-ra;829/tcp;0.000125;# PKIX-3 CA/RA
+netconf-ssh;830/tcp;0.000075;# NETCONF over SSH
+netconf-beep;831/tcp;0.000050;# NETCONF over BEEP
+netconfsoaphttp;832/tcp;0.000038;# NETCONF for SOAP over HTTPS
+netconfsoapbeep;833/tcp;0.000063;# NETCONF for SOAP over BEEP
+dhcp-failover2;847/tcp;0.000063;# dhcp-failover 2
+gdoi;848/tcp;0.000025;# GDOI
+iscsi;860/tcp;0.000063;# iSCSI
+owamp-control;861/tcp;0.000063;# OWAMP-Control
+twamp-control;862/tcp;0.000100;# Two-way Active Measurement Protocol (TWAMP) Control
+supfilesrv;871/tcp;0.000025;# SUP server
+rsync;873/tcp;0.003400;# Rsync server ( http://rsync.samba.org )
+iclcnet-locate;886/tcp;0.000038;# ICL coNETion locate server
+iclcnet_svinfo;887/tcp;0.000025;# ICL coNETion server info
+accessbuilder;888/tcp;0.000928;# or Audio CD Database
+sun-manageconsole;898/tcp;0.000339;# Solaris Management Console Java listener (Solaris 8 & 9)
+omginitialrefs;900/tcp;0.000452;# OMG Initial Refs
+samba-swat;901/tcp;0.000552;# Samba SWAT tool.  Also used by ISS RealSecure.
+iss-realsecure;902/tcp;0.001468;# ISS RealSecure Sensor
+iss-console-mgr;903/tcp;0.000176;# ISS Console Manager
+kink;910/tcp;0.000013;# Kerberized Internet Negotiation of Keys (KINK)
+apex-mesh;912/tcp;0.000527;# APEX relay-relay service
+apex-edge;913/tcp;0.000151;# APEX endpoint-relay service
+oftep-rpc;950/tcp;0.000050;# Often RPC.statd (on Redhat Linux)
+rndc;953/tcp;0.000138;# RNDC is used by BIND 9 (& probably other NS)
+ftps-data;989/tcp;0.000063;# ftp protocol, data, over TLS/SSL
+ftps;990/tcp;0.005570;# ftp protocol, control, over TLS/SSL
+nas;991/tcp;0.000038;# Netnews Administration System
+telnets;992/tcp;0.000903;# telnet protocol over TLS/SSL
+imaps;993/tcp;0.027199;# imap4 protocol over TLS/SSL
+ircs;994/tcp;0.000038;# irc protocol over TLS/SSL
+pop3s;995/tcp;0.029921;# POP3 protocol over TLS/SSL
+xtreelic;996/tcp;0.000100;# XTREE License Server
+windows-icfw;1002/tcp;0.000690;# Windows Internet Connection Firewall or Internet Locator Server for NetMeeting.
+ufsd;1008/tcp;0.000125;# ufsd;;# UFS-aware server
+exp1;1021/tcp;0.000301;# RFC3692-style Experiment 1 (*)    [RFC4727]
+exp2;1022/tcp;0.001217;# RFC3692-style Experiment 2 (*)    [RFC4727]
+netvenuechat;1023/tcp;0.000953;# Nortel NetVenue Notification, Chat, Intercom
+kdm;1024/tcp;0.002722;# K Display Manager (KDE version of xdm)
+NFS-or-IIS;1025/tcp;0.022406;# IIS, NFS, or listener RFS remote_file_sharing
+LSA-or-nterm;1026/tcp;0.010237;# nterm remote_login network_terminal
+iad1;1030/tcp;0.002860;# BBN IAD
+iad2;1031/tcp;0.002221;# BBN IAD
+iad3;1032/tcp;0.001719;# BBN IAD
+netinfo;1033/tcp;0.001342;# Netinfo is apparently on many OS X boxes.
+zincite-a;1034/tcp;0.001064;# Zincite.A backdoor
+multidropper;1035/tcp;0.001216;# A Multidropper Adware, or PhoneFree
+nsstp;1036/tcp;0.001216;# Nebula Secure Segment Transfer Protocol
+ams;1037/tcp;0.001216;# AMS
+mtqp;1038/tcp;0.002053;# Message Tracking Query Protocol
+sbl;1039/tcp;0.002129;# Streamlined Blackhole
+netsaint;1040/tcp;0.001342;# Netsaint status daemon
+danf-ak2;1041/tcp;0.002433;# AK2 Product
+afrog;1042/tcp;0.000988;# Subnet Roaming
+boinc;1043/tcp;0.000841;# BOINC Client Control or Microsoft IIS
+dcutility;1044/tcp;0.002205;# Dev Consortium Utility
+fpitp;1045/tcp;0.000380;# Fingerprint Image Transfer Protocol
+wfremotertm;1046/tcp;0.000380;# WebFilter Remote Monitor
+neod1;1047/tcp;0.000760;# Sun's NEO Object Request Broker
+neod2;1048/tcp;0.002357;# Sun's NEO Object Request Broker
+td-postman;1049/tcp;0.002357;# Tobit David Postman VPMN
+java-or-OTGfileshare;1050/tcp;0.001669;# J2EE nameserver, also OTG, also called Disk/Application extender. Could also be MiniCommand backdoor OTGlicenseserv
+ddt;1052/tcp;0.000760;# Dynamic DNS tools
+remote-as;1053/tcp;0.002357;# Remote Assistant (RA)
+brvread;1054/tcp;0.002357;# BRVREAD
+vfo;1056/tcp;0.002357;# VFO
+startron;1057/tcp;0.000380;# STARTRON
+kiosk;1061/tcp;0.000380;# KIOSK
+kyoceranetdev;1063/tcp;0.000380;# KyoceraNetDev
+jstel;1064/tcp;0.002357;# JSTEL
+syscomlan;1065/tcp;0.002357;# SYSCOMLAN
+instl_boots;1067/tcp;0.000728;# Installation Bootstrap Proto. Serv.
+instl_bootc;1068/tcp;0.000941;# Installation Bootstrap Proto. Cli.
+gmrupdateserv;1070/tcp;0.000380;# GMRUpdateSERV
+bsquare-voip;1071/tcp;0.002205;# BSQUARE-VOIP
+cardax;1072/tcp;0.000380;# CARDAX
+bridgecontrol;1073/tcp;0.000380;# Bridge Control
+warmspotMgmt;1074/tcp;0.001216;# Warmspot Management Protocol
+rdrmshc;1075/tcp;0.000380;# RDRMSHC
+sns_credit;1076/tcp;0.000213;# Shared Network Services (SNS) for Canadian credit card authorizations
+imgames;1077/tcp;0.000380;# IMGames
+avocent-proxy;1078/tcp;0.000380;# Avocent Proxy Protocol
+asprovatalk;1079/tcp;0.000380;# ASPROVATalk
+pvuniwien;1081/tcp;0.000380;# PVUNIWIEN
+amt-esd-prot;1082/tcp;0.000380;# AMT-ESD-PROT
+ansoft-lm-1;1083/tcp;0.000427;# Anasoft License Manager
+ansoft-lm-2;1084/tcp;0.000263;# Anasoft License Manager
+webobjects;1085/tcp;0.000380;# Web Objects
+cplscrambler-lg;1086/tcp;0.000456;# CPL Scrambler Logging
+cplscrambler-in;1087/tcp;0.000304;# CPL Scrambler Internal
+cplscrambler-al;1088/tcp;0.000456;# CPL Scrambler Alarm Log
+ff-annunc;1089/tcp;0.000304;# FF Annunciation
+ff-fms;1090/tcp;0.000228;# FF Fieldbus Message Specification
+ff-sm;1091/tcp;0.000228;# FF System Management
+obrpd;1092/tcp;0.000152;# Open Business Reporting Protocol
+proofd;1093/tcp;0.000380;# PROOFD
+rootd;1094/tcp;0.000380;# ROOTD
+nicelink;1095/tcp;0.000152;# NICELink
+cnrprotocol;1096/tcp;0.000380;# Common Name Resolution Protocol
+sunclustermgr;1097/tcp;0.000456;# Sun Cluster Manager
+rmiactivation;1098/tcp;0.000380;# RMI Activation
+rmiregistry;1099/tcp;0.000380;# RMI Registry
+mctp;1100/tcp;0.000380;# MCTP
+pt2-discover;1101/tcp;0.000076;# PT2-DISCOVER
+adobeserver-1;1102/tcp;0.000152;# ADOBE SERVER 1
+xaudio;1103/tcp;0.000151;# Xaserver;# X Audio Server
+xrl;1104/tcp;0.000380;# XRL
+ftranhc;1105/tcp;0.000152;# FTRANHC
+isoipsigport-1;1106/tcp;0.000380;# ISOIPSIGPORT-1
+isoipsigport-2;1107/tcp;0.000380;# ISOIPSIGPORT-2
+kpop;1109/tcp;0.000151;# Pop with Kerberos
+nfsd-status;1110/tcp;0.005809;# Cluster status info
+lmsocialserver;1111/tcp;0.001140;# LM Social Server
+msql;1112/tcp;0.000276;# mini-sql server
+ltp-deepspace;1113/tcp;0.000152;# Licklider Transmission Protocol
+mini-sql;1114/tcp;0.000228;# Mini SQL
+ardus-cntl;1116/tcp;0.000076;# ARDUS Control
+ardus-mtrns;1117/tcp;0.000228;# ARDUS Multicast Transfer
+sacred;1118/tcp;0.000076;# SACRED
+bnetgame;1119/tcp;0.000228;# Battle.net Chat/Game Protocol
+rmpp;1121/tcp;0.000152;# Datalode RMPP
+murray;1123/tcp;0.000152;# Murray
+hpvmmcontrol;1124/tcp;0.000304;# HP VMM Control
+hpvmmagent;1125/tcp;0.000076;# HP VMM Agent
+hpvmmdata;1126/tcp;0.000152;# HP VMM Agent
+supfiledbg;1127/tcp;0.000088;# SUP debugging
+saphostctrl;1128/tcp;0.000076;# SAPHostControl over SOAP/HTTP
+casp;1130/tcp;0.000152;# CAC App Service Protocol
+caspssl;1131/tcp;0.000228;# CAC App Service Protocol Encripted
+kvm-via-ip;1132/tcp;0.000152;# KVM-via-IP Management Service
+aplx;1134/tcp;0.000076;# MicroAPL APLX
+omnivision;1135/tcp;0.000076;# OmniVision Communication Service
+hhb-gateway;1136/tcp;0.000076;# HHB Gateway Control
+trim;1137/tcp;0.000152;# TRIM Workgroup Service
+encrypted_admin;1138/tcp;0.000228;# encrypted admin requests
+cce3x;1139/tcp;0.000063;# ClearCommerce Engine 3.x ( www.clearcommerce.com)
+mxomss;1141/tcp;0.000152;# User Message Service
+imyx;1143/tcp;0.000076;# Infomatryx Exchange
+fuscript;1144/tcp;0.000076;# Fusion Script
+x9-icue;1145/tcp;0.000152;# X9 iCue Show Control
+capioverlan;1147/tcp;0.000152;# CAPIoverLAN
+elfiq-repl;1148/tcp;0.000380;# Elfiq Replication Service
+bvtsonar;1149/tcp;0.000152;# BVT Sonar Service
+blaze;1150/tcp;0.000076;# Blaze File Server
+unizensus;1151/tcp;0.000228;# Unizensus Login Server
+winpoplanmess;1152/tcp;0.000304;# Winpopup LAN Messenger
+c1222-acse;1153/tcp;0.000076;# ANSI C12.22 Port
+resacommunity;1154/tcp;0.000152;# Community Service
+iascontrol-oms;1156/tcp;0.000076;# iasControl OMS
+iascontrol;1157/tcp;0.000076;# Oracle iASControl
+lsnr;1158/tcp;0.000138;# Oracle DB listener
+oracle-oms;1159/tcp;0.000076;# Oracle OMS
+health-trap;1162/tcp;0.000076;# Health Trap
+sddp;1163/tcp;0.000152;# SmartDialer Data Protocol
+qsm-proxy;1164/tcp;0.000152;# QSM Proxy Service
+qsm-gui;1165/tcp;0.000152;# QSM GUI Service
+qsm-remote;1166/tcp;0.000152;# QSM RemoteExec
+cisco-ipsla;1167/tcp;0.000076;# Cisco IP SLAs Control Protocol
+vchat;1168/tcp;0.000076;# VChat Conference Service
+tripwire;1169/tcp;0.000380;# TRIPWIRE
+d-cinema-rrp;1173/tcp;0.000076;# D-Cinema Request-Response
+fnet-remote-ui;1174/tcp;0.000152;# FlashNet Remote Admin
+dossier;1175/tcp;0.000228;# Dossier Server
+indigo-server;1176/tcp;0.000076;# Indigo Home Server
+skkserv;1178/tcp;0.000050;# SKK (kanji input)
+b2n;1179/tcp;0.000076;# Backup To Neighbor
+mc-client;1180/tcp;0.000076;# Millicent Client Proxy
+accelenet;1182/tcp;0.000076;# AcceleNet Control
+llsurfup-http;1183/tcp;0.000304;# LL Surfup HTTP
+llsurfup-https;1184/tcp;0.000076;# LL Surfup HTTPS
+catchpole;1185/tcp;0.000152;# Catchpole port
+mysql-cluster;1186/tcp;0.000304;# MySQL Cluster Manager
+alias;1187/tcp;0.000152;# Alias Service
+hp-webadmin;1188/tcp;0.000076;# HP Web Admin
+commlinx-avl;1190/tcp;0.000076;# CommLinx GPS / AVL System
+gpfs;1191/tcp;0.000076;# General Parallel File System
+caids-sensor;1192/tcp;0.000152;# caids sensors channel
+openvpn;1194/tcp;0.000076;# OpenVPN
+rsf-1;1195/tcp;0.000076;# RSF-1 clustering
+netmagic;1196/tcp;0.000076;# Network Magic
+cajo-discovery;1198/tcp;0.000152;# cajo reference discovery
+dmidi;1199/tcp;0.000228;# DMIDI
+scol;1200/tcp;0.000076;# SCOL
+nucleus-sand;1201/tcp;0.000228;# Nucleus Sand Database Server
+ssslog-mgr;1204/tcp;0.000076;# Log Request Listener
+metasage;1207/tcp;0.000076;# MetaSage
+seagull-ais;1208/tcp;0.000076;# SEAGULL AIS
+ipcd3;1209/tcp;0.000076;# IPCD3
+eoss;1210/tcp;0.000076;# EOSS
+groove-dpp;1211/tcp;0.000076;# Groove DPP
+mpc-lifenet;1213/tcp;0.000152;# MPC LIFENET
+fasttrack;1214/tcp;0.000050;# Kazaa File Sharing
+scanstat-1;1215/tcp;0.000076;# scanSTAT 1.0
+etebac5;1216/tcp;0.000152;# ETEBAC 5
+hpss-ndapi;1217/tcp;0.000152;# HPSS NonDCE Gateway
+aeroflight-ads;1218/tcp;0.001064;# AeroFlight ADs
+quicktime;1220/tcp;0.000151;# Apple Darwin and QuickTime Streaming Administration Servers
+sweetware-apps;1221/tcp;0.000076;# SweetWARE Apps
+nerv;1222/tcp;0.000138;# SNI R&D network
+tgp;1223/tcp;0.000076;# TrulyGlobal Protocol
+florence;1228/tcp;0.000076;# FLORENCE
+zented;1229/tcp;0.000076;# ZENworks Tiered Electronic Distribution
+univ-appserver;1233/tcp;0.000152;# Universal App Server
+nmsd;1239/tcp;0.000076;# NMSD
+instantia;1240/tcp;0.000076;# Instantia
+nessus;1241/tcp;0.000113;# Nessus or remote message server
+serialgateway;1243/tcp;0.000076;# SerialGateway
+visionpyramid;1247/tcp;0.000304;# VisionPyramid
+mesavistaco;1249/tcp;0.000076;# Mesa Vista Co
+opennl-voice;1259/tcp;0.000152;# Open Network Library Voice
+qnts-orb;1262/tcp;0.000076;# QNTS-ORB
+prat;1264/tcp;0.000076;# PRAT
+propel-msgsys;1268/tcp;0.000076;# PROPEL-MSGSYS
+ssserver;1270/tcp;0.000138;# Sun StorEdge Configuration Service
+excw;1271/tcp;0.000228;# eXcW
+cspmlockmgr;1272/tcp;0.000380;# CSPMLockMgr
+miva-mqs;1277/tcp;0.000152;# mqs
+dellwebadmin-2;1279/tcp;0.000076;# Dell Web Admin 2
+emperion;1282/tcp;0.000076;# Emperion
+routematch;1287/tcp;0.000152;# RouteMatch Com
+winjaserver;1290/tcp;0.000076;# WinJaServer
+seagulllms;1291/tcp;0.000076;# SEAGULLLMS
+h323hostcallsc;1300/tcp;0.000152;# H323 Host Call Secure
+ci3-software-1;1301/tcp;0.000152;# CI3-Software-1
+ci3-software-2;1302/tcp;0.000076;# CI3-Software-2
+re-conn-proto;1306/tcp;0.000076;# RE-Conn-Proto
+pacmand;1307/tcp;0.000076;# Pacmand
+odsi;1308/tcp;0.000076;# Optical Domain Service Interconnect (ODSI)
+jtag-server;1309/tcp;0.000152;# JTAG server
+husky;1310/tcp;0.000380;# Husky
+pdps;1314/tcp;0.000076;# Photoscript Distributed Printing System
+els;1315/tcp;0.000076;# E.L.S., Event Listener Service
+exbit-escp;1316/tcp;0.000076;# Exbit-ESCP
+amx-icsp;1319/tcp;0.000076;# AMX-ICSP
+pip;1321/tcp;0.000076;# PIP
+novation;1322/tcp;0.000152;# Novation
+ultrex;1327/tcp;0.000076;# Ultrex
+ewall;1328/tcp;0.000152;# EWALL
+streetperfect;1330/tcp;0.000076;# StreetPerfect
+ischat;1336/tcp;0.000076;# Instant Service Chat
+waste;1337/tcp;0.000088;# Nullsoft WASTE encrypted P2P app
+naap;1340/tcp;0.000076;# NAAP
+alta-ana-lm;1346/tcp;0.000050;# Alta Analytics License Manager
+bbn-mmc;1347/tcp;0.000151;# multi media conferencing
+bbn-mmx;1348/tcp;0.000038;# multi media conferencing
+sbook;1349/tcp;0.000050;# Registration Network Protocol
+editbench;1350/tcp;0.000113;# Registration Network Protocol
+equationbuilder;1351/tcp;0.000113;# Digital Tool Works (MIT)
+lotusnotes;1352/tcp;0.001154;# Lotus Note
+relief;1353/tcp;0.000100;# Relief Consulting
+rightbrain;1354/tcp;0.000038;# RightBrain Software
+intuitive-edge;1355/tcp;0.000025;# Intuitive Edge
+cuillamartin;1356/tcp;0.000050;# CuillaMartin Company
+pegboard;1357/tcp;0.000100;# Electronic PegBoard
+ndm-requester;1363/tcp;0.000013;# Network DataMover Requester
+ndm-server;1364/tcp;0.000063;# Network DataMover Server
+adapt-sna;1365/tcp;0.000025;# Network Software Associates
+netware-csp;1366/tcp;0.000063;# Novell NetWare Comm Service Platform
+gv-us;1369/tcp;0.000038;# GlobalView to Unix Shell
+us-gv;1370/tcp;0.000050;# Unix Shell to GlobalView
+fc-cli;1371/tcp;0.000013;# Fujitsu Config Protocol
+fc-ser;1372/tcp;0.000038;# Fujitsu Config Protocol
+molly;1374/tcp;0.000013;# EPI Software Systems
+ibm-pps;1376/tcp;0.000025;# IBM Person to Person Software
+dbreporter;1379/tcp;0.000038;# Integrity Solutions
+apple-licman;1381/tcp;0.000038;# Apple Network License Manager
+gwha;1383/tcp;0.000013;# GW Hannaway Network License Manager
+os-licman;1384/tcp;0.000050;# Objective Solutions License Manager
+atex_elmd;1385/tcp;0.000050;# Atex Publishing License Manager
+checksum;1386/tcp;0.000025;# CheckSum License Manager
+cadsi-lm;1387/tcp;0.000038;# Computer Aided Design Software Inc LM
+objective-dbc;1388/tcp;0.000050;# Objective Solutions DataBase Cache
+iclpv-dm;1389/tcp;0.000050;# Document Manager
+iclpv-sc;1390/tcp;0.000025;# Storage Controller
+iclpv-sas;1391/tcp;0.000013;# Storage Access Server
+iclpv-nls;1393/tcp;0.000025;# Network Log Server
+iclpv-nlc;1394/tcp;0.000025;# Network Log Client
+iclpv-wsm;1395/tcp;0.000013;# PC Workstation Manager software
+dvl-activemail;1396/tcp;0.000013;# DVL Active Mail
+audio-activmail;1397/tcp;0.000025;# Audio Active Mail
+video-activmail;1398/tcp;0.000025;# Video Active Mail
+cadkey-licman;1399/tcp;0.000050;# Cadkey License Manager
+cadkey-tablet;1400/tcp;0.000050;# Cadkey Tablet Daemon
+goldleaf-licman;1401/tcp;0.000038;# Goldleaf License Manager
+prm-sm-np;1402/tcp;0.000050;# Prospero Resource Manager
+prm-nm-np;1403/tcp;0.000038;# Prospero Resource Manager
+igi-lm;1404/tcp;0.000050;# Infinite Graphics License Manager
+ibm-res;1405/tcp;0.000038;# IBM Remote Execution Starter
+dbsa-lm;1407/tcp;0.000013;# DBSA License Manager
+sophia-lm;1408/tcp;0.000013;# Sophia License Manager
+here-lm;1409/tcp;0.000025;# Here License Manager
+hiq;1410/tcp;0.000025;# HiQ License Manager
+af;1411/tcp;0.000013;# AudioFile
+ibm-mqseries;1414/tcp;0.000088;# IBM MQSeries
+novell-lu6.2;1416/tcp;0.000013;# Novell LU6.2
+timbuktu-srv1;1417/tcp;0.000201;# Timbuktu Service 1 Port
+timbuktu-srv2;1418/tcp;0.000013;# Timbuktu Service 2 Port
+timbuktu-srv3;1419/tcp;0.000013;# Timbuktu Service 3 Port
+timbuktu-srv4;1420/tcp;0.000063;# Timbuktu Service 4 Port
+autodesk-lm;1422/tcp;0.000025;# Autodesk License Manager
+essbase;1423/tcp;0.000013;# Essbase Arbor Software
+hybrid;1424/tcp;0.000025;# Hybrid Encryption Protocol
+sas-1;1426/tcp;0.000025;# Satellite-data Acquisition System 1
+mloadd;1427/tcp;0.000013;# mloadd monitoring tool
+nms;1429/tcp;0.000013;# Hypercom NMS
+tpdu;1430/tcp;0.000013;# Hypercom TPDU
+blueberry-lm;1432/tcp;0.000025;# Blueberry Software License Manager
+ms-sql-s;1433/tcp;0.007929;# Microsoft-SQL-Server
+ms-sql-m;1434/tcp;0.000201;# Microsoft-SQL-Monitor
+sas-2;1436/tcp;0.000025;# Satellite-data Acquisition System 2
+eicon-server;1438/tcp;0.000025;# Eicon Security Agent/Server
+eicon-x25;1439/tcp;0.000025;# Eicon X25/SNA Gateway
+eicon-slp;1440/tcp;0.000013;# Eicon Service Location Protocol
+cadis-1;1441/tcp;0.000075;# Cadis License Management
+cadis-2;1442/tcp;0.000025;# Cadis License Management
+ies-lm;1443/tcp;0.000238;# Integrated Engineering Software
+marcam-lm;1444/tcp;0.000075;# Marcam License Management
+proxima-lm;1445/tcp;0.000050;# Proxima License Manager
+ora-lm;1446/tcp;0.000025;# Optical Research Associates License Manager
+oc-lm;1448/tcp;0.000013;# OpenConnect License Manager
+infoman;1451/tcp;0.000013;# IBM Information Management
+genie-lm;1453/tcp;0.000013;# Genie License Manager
+interhdl_elmd;1454/tcp;0.000025;# interHDL License Manager
+esl-lm;1455/tcp;0.000176;# ESL License Manager
+valisys-lm;1457/tcp;0.000013;# Valisys License Manager
+nrcabq-lm;1458/tcp;0.000013;# Nichols Research Corp.
+proshare1;1459/tcp;0.000013;# Proshare Notebook Application
+ibm_wrless_lan;1461/tcp;0.000188;# IBM Wireless LAN
+world-lm;1462/tcp;0.000013;# World License Manager
+msl_lmd;1464/tcp;0.000013;# MSL License Manager
+pipes;1465/tcp;0.000050;# Pipes Platform
+oceansoft-lm;1466/tcp;0.000038;# Ocean Software License Manager
+aal-lm;1469/tcp;0.000013;# Active Analysis Limited License Manager
+uaiact;1470/tcp;0.000013;# Universal Analytics
+taligent-lm;1475/tcp;0.000038;# Taligent License Manager
+miteksys-lm;1482/tcp;0.000013;# Miteksys License Manager
+afs;1483/tcp;0.000025;# AFS License Manager
+confluent;1484/tcp;0.000050;# Confluent License Manager
+fhc;1499/tcp;0.000025;# Federico Heinz Consultora
+vlsi-lm;1500/tcp;0.000627;# VLSI License Manager
+sas-3;1501/tcp;0.000602;# Satellite-data Acquisition System 3
+shivadiscovery;1502/tcp;0.000013;# Shiva
+imtc-mcs;1503/tcp;0.000640;# Databeam
+funkproxy;1505/tcp;0.000013;# Funk Software, Inc.
+robcad-lm;1509/tcp;0.000013;# Robcad, Ltd. License Manager
+mvx-lm;1510/tcp;0.000025;# Midland Valley Exploration Ltd. Lic. Man.
+fujitsu-dtc;1513/tcp;0.000025;# Fujitsu Systems Business of America, Inc
+vpad;1516/tcp;0.000113;# Virtual Places Audio data
+vpac;1517/tcp;0.000050;# Virtual Places Audio control
+vpvd;1518/tcp;0.000013;# Virtual Places Video data
+vpvc;1519/tcp;0.000025;# Virtual Places Video control
+oracle;1521/tcp;0.001568;# Oracle Database
+rna-lm;1522/tcp;0.000100;# Ricardo North America License Manager
+ingreslock;1524/tcp;0.000276;# ingres
+orasrv;1525/tcp;0.000088;# oracle or Prospero Directory Service non-priv
+pdap-np;1526/tcp;0.000113;# Prospero Data Access Prot non-priv
+tlisrv;1527/tcp;0.000038;# oracle
+support;1529/tcp;0.000025;# prmsd gnatsd;# cygnus bug tracker
+virtual-places;1533/tcp;0.000238;# Virtual Places Software
+intellistor-lm;1539/tcp;0.000038;# Intellistor License Manager
+axon-lm;1548/tcp;0.000025;# Axon License Manager
+shivahose;1549/tcp;0.000025;# Shiva Hose
+3m-image-lm;1550/tcp;0.000125;# Image Storage license manager 3M Company
+veritas_pbx;1556/tcp;0.000152;# VERITAS Private Branch Exchange
+asci-val;1560/tcp;0.000076;# ASCI-RemoteSHADOW
+winddlb;1565/tcp;0.000076;# WinDD
+corelvideo;1566/tcp;0.000076;# CORELVIDEO
+slp;1605/tcp;0.000076;# Salutation Manager (Salutation Protocol)
+netbill-auth;1615/tcp;0.000076;# NetBill Authorization Server
+pammratc;1632/tcp;0.000076;# PAMMRATC
+edb-server1;1635/tcp;0.000076;# EDB Server 1
+ismc;1638/tcp;0.000076;# ISP shared management control
+invision;1641/tcp;0.000152;# InVision
+sightline;1645/tcp;0.000076;# SightLine
+rsvp-encap-2;1699/tcp;0.000076;# RSVP-ENCAPSULATION-2
+registrar;1712/tcp;0.000076;# resource monitoring service
+conferencetalk;1713/tcp;0.000076;# ConferenceTalk
+H.323/Q.931;1720/tcp;0.014277;# Interactive media
+hks-lm;1722/tcp;0.000076;# HKS License Manager
+pptp;1723/tcp;0.032468;# Point-to-point tunnelling protocol
+privatechat;1735/tcp;0.000076;# PrivateChat
+sslp;1750/tcp;0.000076;# Simple Socket Library's PortMaster
+lofr-lm;1752/tcp;0.000076;# Leap of Faith Research License Manager
+wms;1755/tcp;0.003350;# Windows media service
+landesk-rc;1761/tcp;0.001756;# LANDesk Remote Control
+landesk-rc;1762/tcp;0.000038;# LANDesk Remote Control
+landesk-rc;1763/tcp;0.000025;# LANDesk Remote Control
+ea1;1791/tcp;0.000076;# EA1
+netrisk;1799/tcp;0.000076;# NETRISK
+ansys-lm;1800/tcp;0.000076;# ANSYS-License manager
+msmq;1801/tcp;0.002585;# Microsoft Message Queuing
+enl-name;1805/tcp;0.000152;# ENL-Name
+musiconline;1806/tcp;0.000076;# Musiconline
+fhsp;1807/tcp;0.000076;# Fujitsu Hot Standby Protocol
+oracle-vp2;1808/tcp;0.000076;# Oracle-VP2
+scientia-sdb;1811/tcp;0.000076;# Scientia-SDB
+radius;1812/tcp;0.000152;# RADIUS
+unisys-lm;1823/tcp;0.000076;# Unisys Natural Language License Manager
+direcpc-video;1825/tcp;0.000076;# DirecPC Video
+pcm;1827/tcp;0.000025;# PCM Agent (AutoSecure Policy Compliance Manager
+ardusmul;1835/tcp;0.000076;# ARDUS Multicast
+privateark;1858/tcp;0.000076;# PrivateArk
+lecroy-vicp;1861/tcp;0.000076;# LeCroy VICP
+mysql-cm-agent;1862/tcp;0.000228;# MySQL Cluster Manager Agent
+msnp;1863/tcp;0.000684;# MSN Messenger
+canocentral0;1871/tcp;0.000076;# Cano Central 0
+westell-stats;1875/tcp;0.000152;# westell stats
+upnp;1900/tcp;0.003977;# Universal PnP
+fjicl-tep-a;1901/tcp;0.000076;# Fujitsu ICL Terminal Emulator Program A
+mtp;1911/tcp;0.000076;# Starlight Networks Multimedia Transport Protocol
+elm-momentum;1914/tcp;0.000152;# Elm-Momentum
+can-nds;1918/tcp;0.000076;# IBM Tivole Directory Service - NDS
+xiip;1924/tcp;0.000076;# XIIP
+videte-cipc;1927/tcp;0.000076;# Videte CIPC Port
+rtmp;1935/tcp;0.001179;# Macromedia FlasComm Server
+sentinelsrm;1947/tcp;0.000380;# SentinelSRM
+abr-api;1954/tcp;0.000076;# ABR-API (diskbridge)
+dxadmind;1958/tcp;0.000076;# CA Administration Daemon
+netop-school;1971/tcp;0.000152;# NetOp School
+intersys-cache;1972/tcp;0.000152;# Cache
+dlsrap;1973/tcp;0.000076;# Data Link Switching Remote Access Protocol
+drp;1974/tcp;0.000152;# DRP
+tcoflashagent;1975/tcp;0.000076;# TCO Flash Agent
+tcoregagent;1976/tcp;0.000076;# TCO Reg Agent
+p2pq;1981/tcp;0.000076;# p2pQ
+bigbrother;1984/tcp;0.000201;# Big Brother monitoring server - www.bb4.com
+licensedaemon;1986/tcp;0.000025;# cisco license management
+tr-rsrb-p1;1987/tcp;0.000013;# cisco RSRB Priority 1 port
+tr-rsrb-p2;1988/tcp;0.000050;# cisco RSRB Priority 2 port
+tr-rsrb-p3;1989/tcp;0.000075;# cisco RSRB Priority 3 port
+stun-p1;1990/tcp;0.000025;# cisco STUN Priority 1 port
+stun-p2;1991/tcp;0.000050;# cisco STUN Priority 2 port
+stun-p3;1992/tcp;0.000025;# cisco STUN Priority 3 port
+snmp-tcp-port;1993/tcp;0.000013;# cisco SNMP TCP port
+stun-port;1994/tcp;0.000025;# cisco serial tunnel port
+perf-port;1995/tcp;0.000038;# cisco perf port
+tr-rsrb-port;1996/tcp;0.000038;# cisco Remote SRB port
+gdp-port;1997/tcp;0.000038;# cisco Gateway Discovery Protocol
+x25-svc-port;1998/tcp;0.001731;# cisco X.25 service (XOT)
+tcp-id-port;1999/tcp;0.000364;# cisco identification port
+cisco-sccp;2000/tcp;0.010112;# cisco SCCP (Skinny Client Control Protocol)
+dc;2001/tcp;0.007339;# or nfr20 web queries
+finger;2003/tcp;0.001179;# GNU finger (cfingerd)
+deslogin;2005/tcp;0.001731;# encrypted symmetric telnet/login
+search;2010/tcp;0.000803;# Or nfr411
+raid-cc;2011/tcp;0.000113;# raid
+nfs;2049/tcp;0.006110;# networked file system
+icg-swp;2062/tcp;0.000076;# ICG SWP Port
+dnet-keyproxy;2064/tcp;0.000038;# A closed-source client for solving the RSA cryptographic challenge. This is the keyblock proxy port.
+dlsrpn;2065/tcp;0.000815;# Data Link Switch Read Port Number
+dlswpn;2067/tcp;0.000113;# Data Link Switch Write Port Number
+advocentkvm;2068/tcp;0.000201;# Advocent KVM Server
+event-port;2069/tcp;0.000076;# HTTP Event Port
+ah-esp-encap;2070/tcp;0.000076;# AH and ESP Encapsulated in UDP packet
+autodesk-nlm;2080/tcp;0.000076;# Autodesk NLM (FLEXlm)
+kme-trap-port;2081/tcp;0.000076;# KME PRINTER TRAP PORT
+infowave;2082/tcp;0.000076;# Infowave Mobility Server
+radsec;2083/tcp;0.000076;# Secure Radius Service
+gnunet;2086/tcp;0.000076;# GNUnet
+eli;2087/tcp;0.000076;# ELI - Event Logging Integration
+nbx-ser;2095/tcp;0.000076;# NBX SER
+nbx-dir;2096/tcp;0.000076;# NBX DIR
+h2250-annex-g;2099/tcp;0.000152;# H.225.0 Annex G
+amiganetfs;2100/tcp;0.000380;# Amiga Network Filesystem
+zephyr-clt;2103/tcp;0.002661;# Zephyr serv-hm connection
+zephyr-hm;2104/tcp;0.000076;# Zephyr hostmanager
+eklogin;2105/tcp;0.002120;# Kerberos (v4) encrypted rlogin
+ekshell;2106/tcp;0.000238;# Kerberos (v4) encrypted rshell
+msmq-mgmt;2107/tcp;0.002737;# Microsoft Message Queuing (IANA calls this bintec-admin)
+rkinit;2108/tcp;0.000013;# Kerberos (v4) remote initialization
+kx;2111/tcp;0.000263;# X over kerberos
+kip;2112/tcp;0.000088;# IP over kerberos
+kdm;2115/tcp;0.000076;# Key Distribution Manager
+gsigatekeeper;2119/tcp;0.000380;# GSIGATEKEEPER
+kauth;2120/tcp;0.000050;# Remote kauth
+ccproxy-ftp;2121/tcp;0.005834;# CCProxy FTP Proxy
+elatelink;2124/tcp;0.000076;# ELATELINK
+pktcable-cops;2126/tcp;0.000304;# PktCable-COPS
+avenue;2134/tcp;0.000076;# AVENUE
+gris;2135/tcp;0.000380;# Grid Resource Information Server
+tdmoip;2142/tcp;0.000076;# TDM OVER IP
+lv-ffx;2144/tcp;0.000380;# Live Vault Fast Object Transfer
+veritas-ucl;2148/tcp;0.000076;# Veritas Universal Communication Layer
+dynamic3d;2150/tcp;0.000076;# DYNAMIC3D
+apc-2160;2160/tcp;0.000380;# APC 2160
+apc-agent;2161/tcp;0.001521;# American Power Conversion
+eyetv;2170/tcp;0.000152;# EyeTV Server Port
+vmrdp;2179/tcp;0.000304;# Microsoft RDP for virtual machines
+ssmc;2187/tcp;0.000076;# Sepehr System Management Control
+tivoconnect;2190/tcp;0.000380;# TiVoConnect Beacon
+tvbus;2191/tcp;0.000304;# TvBus Messaging
+mnp-exchange;2197/tcp;0.000076;# MNP data exchange
+ici;2200/tcp;0.000152;# ICI
+ats;2201/tcp;0.000100;# Advanced Training System Program
+b2-runtime;2203/tcp;0.000076;# b2 Runtime Protocol
+EtherNet/IP-1;2222/tcp;0.000608;# EtherNet/IP I/O
+efi-mg;2224/tcp;0.000076;# Easy Flexible Internet/Multiplayer Games
+ivs-video;2232/tcp;0.000151;# IVS Video default
+ivsd;2241/tcp;0.000151;# IVS Daemon
+dif-port;2251/tcp;0.000304;# Distributed Framework Port
+dtv-chan-req;2253/tcp;0.000076;# DTV Channel Request
+apc-2260;2260/tcp;0.000380;# APC 2260
+comotionmaster;2261/tcp;0.000076;# CoMotion Master Server
+comotionback;2262/tcp;0.000076;# CoMotion Backup Server
+apx500api-2;2265/tcp;0.000076;# Audio Precision Apx500 API Port 2
+mikey;2269/tcp;0.000076;# MIKEY
+starschool;2270/tcp;0.000076;# starSchool
+mmcals;2271/tcp;0.000076;# Secure Meeting Maker Scheduling
+lnvpoller;2280/tcp;0.000076;# LNVPOLLER
+netml;2288/tcp;0.000152;# NETML
+eapsp;2291/tcp;0.000076;# EPSON Advanced Printer Share Protocol
+mib-streaming;2292/tcp;0.000076;# Sonus Element Management Services
+cvmmon;2300/tcp;0.000076;# CVMMON
+compaqdiag;2301/tcp;0.001242;# Compaq remote diagnostic/management
+binderysupport;2302/tcp;0.000076;# Bindery Support
+attachmate-uts;2304/tcp;0.000076;# Attachmate UTS
+wanscaler;2312/tcp;0.000076;# WANScaler Communication Service
+iapp;2313/tcp;0.000076;# IAPP (Inter Access Point Protocol)
+ansysli;2325/tcp;0.000076;# ANSYS Licensing Interconnect
+idcp;2326/tcp;0.000076;# IDCP
+tscchat;2330/tcp;0.000076;# TSCCHAT
+ace-proxy;2335/tcp;0.000076;# ACE Proxy
+wrs_registry;2340/tcp;0.000076;# WRS Registry
+worldwire;2371/tcp;0.000076;# Compaq WorldWire Port
+lanmessenger;2372/tcp;0.000076;# LanMessenger
+compaq-https;2381/tcp;0.000380;# Compaq HTTPS
+ms-olap4;2383/tcp;0.001369;# MS OLAP 4
+3com-net-mgmt;2391/tcp;0.000076;# 3COM Net Management
+ms-olap1;2393/tcp;0.000228;# SQL Server Downlevel OLAP Client Support
+ms-olap2;2394/tcp;0.000228;# SQL Server Downlevel OLAP Client Support
+fmpro-fdal;2399/tcp;0.000380;# FileMaker, Inc. - Data Access Layer
+cvspserver;2401/tcp;0.001480;# CVS network server
+fjitsuappmgr;2425/tcp;0.000076;# Fujitsu App Manager
+optilogic;2435/tcp;0.000076;# OptiLogic
+topx;2436/tcp;0.000076;# TOP/X
+msp;2438/tcp;0.000076;# MSP
+sybasedbsynch;2439/tcp;0.000076;# SybaseDBSynch
+ratl;2449/tcp;0.000076;# RATL
+lsi-raid-mgmt;2463/tcp;0.000076;# LSI RAID Management
+c3;2472/tcp;0.000076;# C3
+groove;2492/tcp;0.000380;# GROOVE
+rtsserv;2500/tcp;0.000464;# Resource Tracking system server
+rtsclient;2501/tcp;0.000151;# Resource Tracking system client
+ppcontrol;2505/tcp;0.000076;# PowerPlay Control
+windb;2522/tcp;0.000304;# WinDb
+ms-v-worlds;2525/tcp;0.000456;# MS V-Worlds
+ito-e-gui;2531/tcp;0.000076;# ITO-E GUI
+ovtopmd;2532/tcp;0.000076;# OVTOPMD
+ads;2550/tcp;0.000076;# ADS
+isg-uda-server;2551/tcp;0.000076;# ISG UDA Server
+pclemultimedia;2558/tcp;0.000076;# PCLE Multi Media
+hp-3000-telnet;2564/tcp;0.000013;# HP 3000 NS/VT block mode telnet
+clp;2567/tcp;0.000076;# Cisco Line Protocol
+tributary;2580/tcp;0.000076;# Tributary
+mon;2583/tcp;0.000076;# MON
+citriximaclient;2598/tcp;0.000076;# Citrix MA Client
+zebrasrv;2600/tcp;0.000088;# zebra service
+zebra;2601/tcp;0.002032;# zebra vty
+ripd;2602/tcp;0.000790;# RIPd vty
+ospfd;2604/tcp;0.000765;# OSPFd vty
+bgpd;2605/tcp;0.000514;# BGPd vty
+netmon;2606/tcp;0.000076;# Dell Netmon
+connection;2607/tcp;0.000380;# Dell Connection
+wag-service;2608/tcp;0.000228;# Wag Service
+metricadbc;2622/tcp;0.000076;# MetricaDBC
+lmdp;2623/tcp;0.000076;# LMDP
+webster;2627/tcp;0.000025;# Network dictionary
+dict;2628/tcp;0.000125;# Dictionary service (RFC2229)
+sitaradir;2631/tcp;0.000076;# Sitara Dir
+sybase;2638/tcp;0.000251;# Sybase database
+travsoft-ipx-t;2644/tcp;0.000076;# Travsoft IPX Tunnel
+itinternet;2691/tcp;0.000076;# ITInternet ISM Server
+ncdmirroring;2706/tcp;0.000076;# NCD Mirroring
+sso-service;2710/tcp;0.000152;# SSO Service
+sso-control;2711/tcp;0.000076;# SSO Control
+aocp;2712/tcp;0.000076;# Axapta Object Communication Protocol
+pn-requester;2717/tcp;0.003345;# PN REQUESTER
+pn-requester2;2718/tcp;0.000380;# PN REQUESTER 2
+watchdog-nt;2723/tcp;0.000076;# WatchDog NT Protocol
+msolap-ptp2;2725/tcp;0.000228;# SQL Analysis Server
+sqdr;2728/tcp;0.000076;# SQDR
+ccs-software;2734/tcp;0.000076;# CCS Software
+listen;2766/tcp;0.000013;# System V listener port
+acc-raid;2800/tcp;0.000152;# ACC RAID
+dvr-esm;2804/tcp;0.000076;# March Networks Digital Video Recorders and Enterprise Service Manager products
+corbaloc;2809/tcp;0.000439;# Corba
+gsiftp;2811/tcp;0.000380;# GSI FTP
+aimpp-port-req;2847/tcp;0.000076;# AIMPP Port Req
+metaconsole;2850/tcp;0.000076;# MetaConsole
+icslap;2869/tcp;0.002129;# Universal Plug and Play Device Host, SSDP Discovery Service
+dxmessagebase2;2875/tcp;0.000380;# DX Message Base Transport Protocol
+ndtp;2882/tcp;0.000076;# NDTP
+spcsdlobby;2888/tcp;0.000076;# SPCSDLOBBY
+rsom;2889/tcp;0.000076;# RSOM
+appliance-cfg;2898/tcp;0.000076;# APPLIANCE-CFG
+allstorcns;2901/tcp;0.000076;# ALLSTORCNS
+netaspi;2902/tcp;0.000076;# NET ASPI
+extensisportfolio;2903/tcp;0.000100;# Portfolio Server by Extensis Product Group
+funk-dialout;2909/tcp;0.000228;# Funk Dialout
+tdaccess;2910/tcp;0.000152;# TDAccess
+roboeda;2920/tcp;0.000152;# roboEDA
+amx-weblinx;2930/tcp;0.000076;# AMX-WEBLINX
+jmact5;2957/tcp;0.000076;# JAMCT5
+jmact6;2958/tcp;0.000076;# JAMCT6
+symantec-av;2967/tcp;0.002357;# Symantec AntiVirus (rtvscan.exe)
+enpp;2968/tcp;0.000152;# ENPP
+svnetworks;2973/tcp;0.000076;# SV Networks
+hpidsadmin;2984/tcp;0.000076;# HPIDSADMIN
+hippad;2988/tcp;0.000076;# HIPPA Reporting Protocol
+wkstn-mon;2991/tcp;0.000076;# WKSTN-MON
+rebol;2997/tcp;0.000076;# REBOL
+iss-realsec;2998/tcp;0.000351;# ISS RealSecure IDS Remote Console Admin port
+ppp;3000/tcp;0.004115;# User-level ppp daemon, or chili!soft asp
+nessus;3001/tcp;0.003124;# Nessus Security Scanner (www.nessus.org) Daemon or chili!soft asp
+exlm-agent;3002/tcp;0.000076;# EXLM Agent
+cgms;3003/tcp;0.000228;# CGMS
+deslogin;3005/tcp;0.000477;# encrypted symmetric telnet/login
+lotusmtap;3007/tcp;0.000152;# Lotus Mail Tracking Agent Protocol
+trusted-web;3011/tcp;0.000304;# Trusted Web
+gilatskysurfer;3013/tcp;0.000152;# Gilat Sky Surfer
+broker_service;3014/tcp;0.000076;# Broker Service
+event_listener;3017/tcp;0.000380;# Event Listener
+slnp;3025/tcp;0.000125;# SLNP (Simple Library Network Protocol) by Sisis Informationssysteme GmbH
+arepa-cas;3030/tcp;0.000304;# Arepa Cas
+eppc;3031/tcp;0.000380;# Remote AppleEvents/PPC Toolbox
+slnp;3045/tcp;0.000063;# SLNP (Simple Library Network Protocol) by Sisis Informationssysteme GmbH
+cfs;3049/tcp;0.000063;# cryptographic file system (nfs) (proposed)
+goahead-fldup;3057/tcp;0.000076;# GoAhead FldUp
+dnet-tstproxy;3064/tcp;0.000063;# distributed.net (a closed source crypto-cracking project) proxy test port
+csd-mgmt-port;3071/tcp;0.000380;# ContinuStor Manager Port
+orbix-loc-ssl;3077/tcp;0.000304;# Orbix 2000 Locator SSL
+sj3;3086/tcp;0.000050;# SJ3 (kanji input)
+ptk-alink;3089/tcp;0.000076;# ParaTek Agent Linking
+slslavemon;3102/tcp;0.000076;# SoftlinK Slave Mon Port
+autocuesmi;3103/tcp;0.000076;# Autocue SMI Protocol
+pkagent;3118/tcp;0.000076;# PKAgent
+d2000kernel;3119/tcp;0.000152;# D2000 Kernel Port
+sflm;3162/tcp;0.000152;# SFLM
+nowcontact;3167/tcp;0.000076;# Now Contact Public Server
+poweronnud;3168/tcp;0.000228;# Now Up-to-Date Public Server
+csvr-proxy;3190/tcp;0.000076;# ConServR Proxy
+tick-port;3200/tcp;0.000076;# Press-sense Tick Port
+flamenco-proxy;3210/tcp;0.000076;# Flamenco Networks Proxy
+avsecuremgmt;3211/tcp;0.000380;# Avocent Secure Management
+xnm-ssl;3220/tcp;0.000076;# XML NM over SSL
+xnm-clear-text;3221/tcp;0.000228;# XML NM over TCP
+triomotion;3240/tcp;0.000076;# Trio Motion Control Port
+iscsi;3260/tcp;0.001064;# iSCSI
+winshadow;3261/tcp;0.000304;# winShadow
+ecolor-imager;3263/tcp;0.000076;# E-Color Enterprise Imager
+ccmail;3264/tcp;0.000038;# cc:mail/lotus
+globalcatLDAP;3268/tcp;0.001229;# Global Catalog LDAP
+globalcatLDAPssl;3269/tcp;0.001142;# Global Catalog LDAP over ssl
+vs-server;3280/tcp;0.000076;# VS Server
+sysopt;3281/tcp;0.000076;# SYSOPT
+netassistant;3283/tcp;0.000760;# Apple Remote Desktop Net Assistant reporting feature
+sah-lm;3291/tcp;0.000076;# S A Holditch & Associates - LM
+meetingmaker;3292/tcp;0.000038;# Meeting maker time management software
+saprouter;3299/tcp;0.000125;# SAProuter
+opsession-srvr;3304/tcp;0.000152;# OP Session Server
+mysql;3306/tcp;0.045390;# mySQL
+opsession-prxy;3307/tcp;0.000152;# OP Session Proxy
+dyna-access;3310/tcp;0.000076;# Dyna Access
+mcns-tel-ret;3311/tcp;0.000076;# MCNS Tel Ret
+sdt-lmd;3319/tcp;0.000076;# SDT License Manager
+active-net;3322/tcp;0.000228;# Active Networks
+active-net;3323/tcp;0.000380;# Active Networks
+active-net;3324/tcp;0.000228;# Active Networks
+active-net;3325/tcp;0.000380;# Active Networks
+dec-notes;3333/tcp;0.000790;# DEC Notes
+directv-web;3334/tcp;0.000076;# Direct TV Webcasting
+btrieve;3351/tcp;0.000380;# Btrieve port
+dj-ilm;3362/tcp;0.000076;# DJ ILM
+nati-vi-server;3363/tcp;0.000076;# NATI Vi Server
+contentserver;3365/tcp;0.000076;# Content Server
+satvid-datalnk;3367/tcp;0.000380;# Satellite Video Data Link
+satvid-datalnk;3368/tcp;0.000076;# Satellite Video Data Link
+satvid-datalnk;3369/tcp;0.000304;# Satellite Video Data Link
+satvid-datalnk;3370/tcp;0.000304;# Satellite Video Data Link
+satvid-datalnk;3371/tcp;0.000304;# Satellite Video Data Link
+msdtc;3372/tcp;0.000339;# MS distributed transaction coordinator
+cluster-disc;3374/tcp;0.000076;# Cluster Disc
+cdbroker;3376/tcp;0.000152;# CD Broker
+cbserver;3388/tcp;0.000076;# CB Server
+ms-wbt-server;3389/tcp;0.083904;# Microsoft Remote Display Protocol (aka ms-term-serv, microsoft-rdp)
+dsc;3390/tcp;0.000228;# Distributed Service Coordinator
+printer_agent;3396/tcp;0.000076;# Printer Agent
+saposs;3397/tcp;0.000038;# SAP Oss
+sapcomm;3398/tcp;0.000063;# SAPcomm
+sapeps;3399/tcp;0.000100;# SAP EPS
+csms2;3400/tcp;0.000152;# CSMS2
+networklenss;3410/tcp;0.000152;# NetworkLens SSL Event
+wip-port;3414/tcp;0.000076;# BroadCloud WIP Port
+bcinameservice;3415/tcp;0.000076;# BCI Name Service
+softaudit;3419/tcp;0.000076;# Isogon SoftAudit
+bmap;3421/tcp;0.000013;# Bull Apprise portmapper
+agps-port;3425/tcp;0.000076;# AGPS Access Port
+ssdispatch;3430/tcp;0.000076;# Scott Studios Dispatch
+hri-port;3439/tcp;0.000076;# HRI Interface Port
+ov-nnm-websrv;3443/tcp;0.000076;# OpenView Network Node Manager WEB Server
+vat;3456/tcp;0.000100;# VAT default data
+vat-control;3457/tcp;0.000025;# VAT default control
+nppmp;3476/tcp;0.000532;# NVIDIA Mgmt Protocol
+twrpc;3479/tcp;0.000076;# 2Wire RPC
+slim-devices;3483/tcp;0.000076;# Slim Devices Protocol
+celatalk;3485/tcp;0.000076;# CelaTalk
+ifsf-hb-port;3486/tcp;0.000076;# IFSF Heartbeat Port
+nut;3493/tcp;0.000304;# Network UPS Tools
+ipether232port;3497/tcp;0.000076;# ipEther232Port
+lsp-ping;3503/tcp;0.000076;# MPLS LSP-echo Port
+ccmcomm;3505/tcp;0.000076;# CCM communications port
+apc-3506;3506/tcp;0.000076;# APC 3506
+webmail-2;3511/tcp;0.000076;# WebMail/2
+arcpd;3513/tcp;0.000076;# Adaptec Remote Protocol
+must-p2p;3514/tcp;0.000152;# MUST Peer to Peer
+must-backplane;3515/tcp;0.000076;# MUST Backplane
+802-11-iapp;3517/tcp;0.000228;# IEEE 802.11 WLANs WG IAPP
+nvmsgd;3519/tcp;0.000076;# Netvion Messenger Port
+galileolog;3520/tcp;0.000076;# Netvion Galileo Log Port
+starquiz-port;3526/tcp;0.000076;# starQuiz Port
+beserver-msg-q;3527/tcp;0.000228;# VERITAS Backup Exec Server
+gf;3530/tcp;0.000076;# Grid Friendly
+peerenabler;3531/tcp;0.000025;# P2PNetworking/PeerEnabler protocol
+raven-rmp;3532/tcp;0.000076;# Raven Remote Management Control
+apcupsd;3551/tcp;0.000380;# Apcupsd Information Port
+config-port;3577/tcp;0.000076;# Configuration Port
+nati-svrloc;3580/tcp;0.000380;# NATI-ServiceLocator
+emprise-lsc;3586/tcp;0.000076;# License Server Console
+quasar-server;3599/tcp;0.000076;# Quasar Accounting Server
+trap-daemon;3600/tcp;0.000076;# text relay-answer
+infiniswitchcl;3602/tcp;0.000076;# InfiniSwitch Mgr Client
+int-rcv-cntrl;3603/tcp;0.000076;# Integrated Rcvr Control
+ep-nsp;3621/tcp;0.000076;# EPSON Network Screen Port
+ff-lr-port;3622/tcp;0.000076;# FF LAN Redundancy Port
+distccd;3632/tcp;0.000100;# Distributed compiler daemon
+servistaitsm;3636/tcp;0.000076;# SerVistaITSM
+scservp;3637/tcp;0.000076;# Customer Service Port
+vxcrnbuport;3652/tcp;0.000076;# VxCR NBU Default Port
+tsp;3653/tcp;0.000076;# Tunnel Setup Protocol
+abatjss;3656/tcp;0.000076;# ActiveBatch Job Scheduler
+ps-ams;3658/tcp;0.000076;# PlayStation AMS (Secure)
+apple-sasl;3659/tcp;0.000380;# Apple SASL
+dtp;3663/tcp;0.000076;# DIRECWAY Tunnel Protocol
+casanswmgmt;3669/tcp;0.000076;# CA SAN Switch Management
+smile;3670/tcp;0.000076;# SMILE TCP/UDP Interface
+lispworks-orb;3672/tcp;0.000076;# LispWorks ORB
+npds-tracker;3680/tcp;0.000076;# NPDS Tracker
+bts-x73;3681/tcp;0.000076;# BTS X73 Port
+bmc-ea;3683/tcp;0.000076;# BMC EDV/EA
+faxstfx-port;3684/tcp;0.000152;# FAXstfX
+rendezvous;3689/tcp;0.002283;# Rendezvous Zeroconf (used by Apple/iTunes)
+svn;3690/tcp;0.001597;# Subversion
+nw-license;3697/tcp;0.000152;# NavisWorks License System
+lrs-paging;3700/tcp;0.000152;# LRS NetPage
+adobeserver-3;3703/tcp;0.002357;# Adobe Server 3
+sentinel-ent;3712/tcp;0.000076;# Sentinel Enterprise
+e-woa;3728/tcp;0.000076;# Ericsson Web on Air
+smap;3731/tcp;0.000152;# Service Manager
+xpanel;3737/tcp;0.000304;# XPanel Daemon
+cst-port;3742/tcp;0.000076;# CST - Configuration & Service Tracker
+cimtrak;3749/tcp;0.000076;# CimTrak
+rtraceroute;3765/tcp;0.000076;# Remote Traceroute
+bfd-control;3784/tcp;0.000380;# BFD Control Protocol
+fintrx;3787/tcp;0.000076;# Fintrx
+isrp-port;3788/tcp;0.000076;# SPACEWAY Routing port
+quickbooksrds;3790/tcp;0.000076;# QuickBooks RDS
+sitewatch;3792/tcp;0.000152;# e-Watch Corporation SiteWatch
+dcsoftware;3793/tcp;0.000076;# DataCore Software
+myblast;3795/tcp;0.000076;# myBLAST Mekentosj port
+spw-dialer;3796/tcp;0.000076;# Spaceway Dialer
+minilock;3798/tcp;0.000076;# Minilock
+radius-dynauth;3799/tcp;0.000076;# RADIUS Dynamic Authorization
+pwgpsi;3800/tcp;0.000228;# Print Services Interface
+ibm-mgr;3801/tcp;0.000380;# ibm manager service
+soniqsync;3803/tcp;0.000076;# SoniqSync
+wsmlb;3806/tcp;0.000076;# Remote System Manager
+sun-as-iiops-ca;3808/tcp;0.000152;# Sun App Svr-IIOPClntAuth
+apocd;3809/tcp;0.000228;# Java Desktop System Configuration Agent
+wlanauth;3810/tcp;0.000076;# WLAN AS server
+amp;3811/tcp;0.000076;# AMP
+neto-wol-server;3812/tcp;0.000076;# netO WOL Server
+rap-ip;3813/tcp;0.000076;# Rhapsody Interface Protocol
+neto-dcs;3814/tcp;0.000228;# netO DCS
+tapeware;3817/tcp;0.000076;# Yosemite Tech Tapeware
+scp;3820/tcp;0.000152;# Siemens AuD SCP
+acp-conduit;3823/tcp;0.000076;# Compute Pool Conduit
+acp-policy;3824/tcp;0.000152;# Compute Pool Policy
+ffserver;3825/tcp;0.000076;# Antera FlowFusion Process Simulation
+wormux;3826/tcp;0.000228;# Wormux server
+netmpi;3827/tcp;0.000380;# Netadmin Systems MPI service
+neteh;3828/tcp;0.000304;# Netadmin Systems Event Handler
+cernsysmgmtagt;3830/tcp;0.000076;# Cerner System Management Agent
+dvapps;3831/tcp;0.000076;# Docsvault Application Service
+mkm-discovery;3837/tcp;0.000076;# MARKEM Auto-Discovery
+amx-rms;3839/tcp;0.000076;# AMX Resource Management Suite
+nhci;3842/tcp;0.000076;# NHCI status port
+an-pcp;3846/tcp;0.000152;# Astare Network PCP
+msfw-control;3847/tcp;0.000076;# MS Firewall Control
+item;3848/tcp;0.000152;# IT Environmental Monitor
+spw-dnspreload;3849/tcp;0.000152;# SPACEWAY DNS Preload
+qtms-bootstrap;3850/tcp;0.000076;# QTMS Bootstrap Protocol
+spectraport;3851/tcp;0.000304;# SpectraTalk Port
+sse-app-config;3852/tcp;0.000152;# SSE App Configuration
+sscan;3853/tcp;0.000152;# SONY scanning protocol
+informer;3856/tcp;0.000076;# INFORMER
+nav-port;3859/tcp;0.000152;# Navini Port
+sasp;3860/tcp;0.000076;# Server/Application State Protocol (SASP)
+asap-tcp;3863/tcp;0.000152;# RSerPool ASAP (TCP)
+diameter;3868/tcp;0.000076;# DIAMETER
+ovsam-mgmt;3869/tcp;0.000228;# hp OVSAM MgmtServer Disco
+ovsam-d-agent;3870/tcp;0.000152;# hp OVSAM HostAgent Disco
+avocent-adsap;3871/tcp;0.000304;# Avocent DS Authorization
+oem-agent;3872/tcp;0.000152;# OEM Agent
+dl_agent;3876/tcp;0.000076;# DirectoryLockdown Agent
+fotogcad;3878/tcp;0.000228;# FotoG CAD interface
+appss-lm;3879/tcp;0.000076;# appss license manager
+igrs;3880/tcp;0.000304;# IGRS
+msdts1;3882/tcp;0.000076;# DTS Service Port
+ciphire-serv;3888/tcp;0.000152;# Ciphire Services
+dandv-tester;3889/tcp;0.000228;# D and V Tester Control Port
+ndsconnect;3890/tcp;0.000076;# Niche Data Server Connect
+sdo-ssh;3897/tcp;0.000076;# Simple Distributed Objects over SSH
+itv-control;3899/tcp;0.000076;# ITV Port
+udt_os;3900/tcp;0.000050;# Unidata UDT OS
+nimsh;3901/tcp;0.000076;# NIM Service Handler
+nimaux;3902/tcp;0.000076;# NIMsh Auxiliary Port
+omnilink-port;3904/tcp;0.000076;# Arnet Omnilink Port
+mupdate;3905/tcp;0.000228;# Mailbox Update (MUPDATE) protocol
+topovista-data;3906/tcp;0.000076;# TopoVista elevation data
+imoguia-port;3907/tcp;0.000152;# Imoguia Port
+hppronetman;3908/tcp;0.000076;# HP Procurve NetManagement
+surfcontrolcpa;3909/tcp;0.000076;# SurfControl CPA
+prnstatus;3911/tcp;0.000076;# Printer Status Port
+listcrt-port;3913/tcp;0.000076;# ListCREATOR Port
+listcrt-port-2;3914/tcp;0.000228;# ListCREATOR Port 2
+agcat;3915/tcp;0.000076;# Auto-Graphics Cataloging
+wysdmc;3916/tcp;0.000152;# WysDM Controller
+pktcablemmcops;3918/tcp;0.000304;# PacketCableMultimediaCOPS
+hyperip;3919/tcp;0.000076;# HyperIP
+exasoftport1;3920/tcp;0.000228;# Exasoft IP Port
+sor-update;3922/tcp;0.000076;# Soronti Update Port
+symb-sb-port;3923/tcp;0.000076;# Symbian Service Broker
+netboot-pxe;3928/tcp;0.000076;# PXE NetBoot Manager
+smauth-port;3929/tcp;0.000152;# AMS Port
+syam-webserver;3930/tcp;0.000076;# Syam Web Server Port
+msr-plugin-port;3931/tcp;0.000152;# MSR Plugin Port
+sdp-portmapper;3935/tcp;0.000076;# SDP Port Mapper Protocol
+mailprox;3936/tcp;0.000076;# Mailprox
+dvbservdsc;3937/tcp;0.000076;# DVB Service Discovery
+xecp-node;3940/tcp;0.000076;# XeCP Node Service
+homeportal-web;3941/tcp;0.000152;# Home Portal Web Server
+tig;3943/tcp;0.000076;# TetraNode Ip Gateway
+sops;3944/tcp;0.000152;# S-Ops Management
+emcads;3945/tcp;0.000228;# EMCADS Server Port
+backupedge;3946/tcp;0.000076;# BackupEDGE Server
+apdap;3948/tcp;0.000076;# Anton Paar Device Administration Protocol
+drip;3949/tcp;0.000076;# Dynamic Routing Information Protocol
+i3-sessionmgr;3952/tcp;0.000076;# I3 Session Manager
+gvcp;3956/tcp;0.000076;# GigE Vision Control
+mqe-broker;3957/tcp;0.000152;# MQEnterprise Broker
+proaxess;3961/tcp;0.000076;# ProAxess Server
+sbi-agent;3962/tcp;0.000076;# SBI Agent Protocol
+thrp;3963/tcp;0.000152;# Teran Hybrid Routing Protocol
+sasggprs;3964/tcp;0.000076;# SASG GPRS
+ppsms;3967/tcp;0.000076;# PPS Message Service
+ianywhere-dbns;3968/tcp;0.000152;# iAnywhere DBNS
+landmarks;3969/tcp;0.000152;# Landmark Messages
+lanrevserver;3971/tcp;0.000228;# LANrev Server
+iconp;3972/tcp;0.000152;# ict-control Protocol
+airshot;3975/tcp;0.000076;# Air Shot
+smwan;3979/tcp;0.000076;# Smith Micro Wide Area Network Service
+acms;3980/tcp;0.000076;# Aircraft Cabin Management System
+starfish;3981/tcp;0.000152;# Starfish System Admin
+eis;3982/tcp;0.000076;# ESRI Image Server
+eisp;3983/tcp;0.000076;# ESRI Image Service
+mapper-nodemgr;3984/tcp;0.000013;# MAPPER network node manager
+mapper-mapethd;3985/tcp;0.000075;# MAPPER TCP/IP server
+mapper-ws_ethd;3986/tcp;0.003977;# MAPPER workstation server
+bv-queryengine;3989/tcp;0.000076;# BindView-Query Engine
+bv-is;3990/tcp;0.000152;# BindView-IS
+bv-smcsrv;3991/tcp;0.000076;# BindView-SMCServer
+bv-ds;3992/tcp;0.000076;# BindView-DirectoryServer
+bv-agent;3993/tcp;0.000152;# BindView-Agent
+iss-mgmt-ssl;3995/tcp;0.000304;# ISS Management Svcs SSL
+abcsoftware;3996/tcp;0.000076;# abcsoftware-01
+agentsease-db;3997/tcp;0.000076;# aes_db
+dnx;3998/tcp;0.000380;# Distributed Nagios Executor Service
+remoteanything;3999/tcp;0.000088;# neoworx remote-anything slave file browser
+remoteanything;4000/tcp;0.001794;# neoworx remote-anything slave remote control
+newoak;4001/tcp;0.002129;# NewOak
+mlchat-proxy;4002/tcp;0.000765;# mlnet - MLChat P2P chat proxy
+netcheque;4008/tcp;0.000075;# NetCheque accounting
+chimera-hwm;4009/tcp;0.000152;# Chimera HWM
+samsung-unidex;4010/tcp;0.000076;# Samsung Unidex
+talarian-mcast2;4016/tcp;0.000076;# Talarian Mcast
+trap;4020/tcp;0.000076;# TRAP Port
+dnox;4022/tcp;0.000076;# DNOX
+tnp1-port;4024/tcp;0.000076;# TNP1 User Port
+partimage;4025/tcp;0.000076;# Partition Image Port
+ip-qsig;4029/tcp;0.000076;# IP Q signaling protocol
+wap-push-http;4035/tcp;0.000076;# WAP Push OTA-HTTP port
+wap-push-https;4036/tcp;0.000076;# WAP Push OTA-HTTP secure
+fazzt-admin;4039/tcp;0.000076;# Fazzt Administration
+yo-main;4040/tcp;0.000152;# Yo.net main service
+lms;4056/tcp;0.000076;# Location Message Service
+kingfisher;4058/tcp;0.000076;# Kingfisher protocol
+avanti_cdp;4065/tcp;0.000076;# Avanti Common Data
+lorica-in;4080/tcp;0.000152;# Lorica inside facing
+applusservice;4087/tcp;0.000076;# APplus Service
+omasgport;4090/tcp;0.000076;# OMA BCAST Service Guide
+bre;4096/tcp;0.000152;# BRE (Bridge Relay Element)
+igo-incognito;4100/tcp;0.000076;# IGo Incognito Data Port
+brlp-0;4101/tcp;0.000076;# Braille protocol
+xgrid;4111/tcp;0.000304;# Xgrid
+apple-vpns-rp;4112/tcp;0.000076;# Apple VPN Server Reporting Protocol
+aipn-reg;4113/tcp;0.000076;# AIPN LS Registration
+netscript;4118/tcp;0.000076;# Netadmin Systems NETscript service
+assuria-slm;4119/tcp;0.000076;# Assuria Log Manager
+e-builder;4121/tcp;0.000076;# e-Builder Application Communication
+rww;4125/tcp;0.000188;# Microsoft Remote Web Workplace on Small Business Server
+ddrepl;4126/tcp;0.000380;# Data Domain Replication Service
+nuauth;4129/tcp;0.000380;# NuFW authentication protocol
+nuts_dem;4132/tcp;0.000025;# NUTS Daemon
+nuts_bootp;4133/tcp;0.000013;# NUTS Bootp Server
+cl-db-attach;4135/tcp;0.000076;# Classic Line Database Server Attach
+oirtgsvc;4141/tcp;0.000076;# Workflow Server
+oidsr;4143/tcp;0.000152;# Document Replication
+wincim;4144/tcp;0.000025;# pc windows compuserve.com protocol
+vrxpservman;4147/tcp;0.000152;# Multum Service Manager
+stat-cc;4158/tcp;0.000076;# STAT Command Center
+omscontact;4161/tcp;0.000076;# OMS Contact
+silverpeakcomm;4164/tcp;0.000152;# Silver Peak Communication Protocol
+sieve;4190/tcp;0.000076;# ManageSieve Protocol
+azeti;4192/tcp;0.000076;# Azeti Agent Service
+eims-admin;4199/tcp;0.000063;# Eudora Internet Mail Service (EIMS) admin
+vrml-multi-use;4200/tcp;0.000152;# VRML Multi User Systems
+vrml-multi-use;4206/tcp;0.000076;# VRML Multi User Systems
+vrml-multi-use;4220/tcp;0.000076;# VRML Multi User Systems
+xtell;4224/tcp;0.000226;# Xtell messenging server
+vrml-multi-use;4234/tcp;0.000076;# VRML Multi User Systems
+vrml-multi-use;4242/tcp;0.000456;# VRML Multi User Systems
+vrml-multi-use;4252/tcp;0.000152;# VRML Multi User Systems
+vrml-multi-use;4262/tcp;0.000076;# VRML Multi User Systems
+vrml-multi-use;4279/tcp;0.000228;# VRML Multi User Systems
+vrml-multi-use;4294/tcp;0.000076;# VRML Multi User Systems
+vrml-multi-use;4297/tcp;0.000076;# VRML Multi User Systems
+vrml-multi-use;4298/tcp;0.000076;# VRML Multi User Systems
+corelccam;4300/tcp;0.000076;# Corel CCam
+d-data-control;4302/tcp;0.000076;# Diagnostic Data Control
+rwhois;4321/tcp;0.000276;# Remote Who Is
+geognosisman;4325/tcp;0.000076;# Cadcorp GeognoSIS Manager Service
+jaxer-manager;4328/tcp;0.000076;# Jaxer Manager Command Protocol
+msql;4333/tcp;0.000113;# mini-sql server
+lisp-cons;4342/tcp;0.000076;# LISP-CONS Control
+qsnet-workst;4355/tcp;0.000076;# QSNet Workstation
+qsnet-assist;4356/tcp;0.000076;# QSNet Assistant
+qsnet-cond;4357/tcp;0.000076;# QSNet Conductor
+qsnet-nucl;4358/tcp;0.000076;# QSNet Nucleus
+epmd;4369/tcp;0.000076;# Erlang Port Mapper Daemon
+psi-ptt;4374/tcp;0.000076;# PSI Push-to-Talk Protocol
+tolteces;4375/tcp;0.000076;# Toltec EasyShare
+bip;4376/tcp;0.000076;# BioAPI Interworking
+ds-srvr;4401/tcp;0.000076;# ASIGRA Televaulting DS-System Service
+nacagent;4407/tcp;0.000076;# Network Access Control Agent
+rsqlserver;4430/tcp;0.000152;# REAL SQL Server
+saris;4442/tcp;0.000076;# Saris
+krb524;4444/tcp;0.001041;# Kerberos 5 to 4 ticket xlator
+upnotifyp;4445/tcp;0.000228;# UPNOTIFYP
+n1-fwp;4446/tcp;0.000304;# N1-FWP
+n1-rmgmt;4447/tcp;0.000076;# N1-RMGMT
+privatewire;4449/tcp;0.000380;# PrivateWire
+nssagentmgr;4454/tcp;0.000076;# NSS Agent Manager
+proxy-plus;4480/tcp;0.000038;# Proxy+ HTTP proxy port
+worldscores;4545/tcp;0.000076;# WorldScores
+gds-adppiw-db;4550/tcp;0.000228;# Perman I Interbase Server
+rsip;4555/tcp;0.000152;# RSIP Port
+fax;4557/tcp;0.000050;# FlexFax FAX transmission service
+hylafax;4559/tcp;0.000151;# HylaFAX client-server protocol
+tram;4567/tcp;0.000228;# TRAM
+a17-an-an;4599/tcp;0.000076;# A17 (AN-AN)
+piranha1;4600/tcp;0.000152;# Piranha1
+piranha2;4601/tcp;0.000076;# Piranha2
+mtsserver;4602/tcp;0.000076;# EAX MTS Server
+playsta2-app;4658/tcp;0.000152;# PlayStation2 App Port
+mosmig;4660/tcp;0.000050;# OpenMOSix MIGrates local processes
+edonkey;4662/tcp;0.000828;# eDonkey file sharing (Donkey)
+contclientms;4665/tcp;0.000076;# Container Client Message Service
+rfa;4672/tcp;0.000013;# remote file access server
+nst;4687/tcp;0.000076;# Network Scanner Tool FTP
+altovacentral;4689/tcp;0.000076;# Altova DatabaseCentral
+netxms-agent;4700/tcp;0.000076;# NetXMS Agent
+pulseaudio;4713/tcp;0.000076;# Pulse Audio UNIX sound framework
+fmp;4745/tcp;0.000076;# Funambol Mobile Push
+iims;4800/tcp;0.000076;# Icona Instant Messenging System
+appserv-http;4848/tcp;0.000228;# App Server - Admin HTTP
+radmin;4899/tcp;0.003337;# Radmin (www.radmin.com) remote PC control software
+hfcs;4900/tcp;0.000228;# HyperFileSQL Client/Server Database Engine
+lutap;4912/tcp;0.000076;# Technicolor LUT Access Protocol
+munin;4949/tcp;0.000152;# Munin Graphing Framework
+hfcs-manager;4999/tcp;0.000076;# HyperFileSQL Client/Server Database Engine Manager
+upnp;5000/tcp;0.006423;# Universal PnP, also Free Internet Chess Server
+rfe;5002/tcp;0.000765;# Radio Free Ethernet
+filemaker;5003/tcp;0.001756;# Filemaker Server - http://www.filemaker.com/ti/104289.html
+avt-profile-1;5004/tcp;0.000532;# RTP media data [RFC 3551][RFC 4571]
+avt-profile-2;5005/tcp;0.000076;# RTP control protocol [RFC 3551][RFC 4571]
+airport-admin;5009/tcp;0.004416;# Apple AirPort WAP Administration
+nsp;5012/tcp;0.000076;# NetOnTap Service
+fmpro-v6;5013/tcp;0.000076;# FileMaker, Inc. - Proprietary transport
+fmwp;5015/tcp;0.000076;# FileMaker, Inc. - Web publishing
+htuilsrv;5023/tcp;0.000076;# Htuil Server for PLD2
+surfpass;5030/tcp;0.000380;# SurfPass
+mmcc;5050/tcp;0.002584;# multimedia conference control tool
+ida-agent;5051/tcp;0.003649;# Symantec Intruder Alert
+ita-manager;5052/tcp;0.000076;# ITA Manager
+rlm;5053/tcp;0.000076;# RLM License Server
+rlm-admin;5054/tcp;0.000304;# RLM administrative interface
+unot;5055/tcp;0.000076;# UNOT
+sip;5060/tcp;0.010613;# Session Initiation Protocol (SIP)
+sip-tls;5061/tcp;0.000228;# SIP-TLS
+csrpc;5063/tcp;0.000152;# centrify secure RPC
+stanag-5066;5066/tcp;0.000076;# STANAG-5066-SUBNET-INTF
+vtsas;5070/tcp;0.000076;# VersaTrans Server Agent Service
+alesquery;5074/tcp;0.000152;# ALES Query
+onscreen;5080/tcp;0.000228;# OnScreen Data Collection Service
+sdl-ets;5081/tcp;0.000152;# SDL - Ent Trans Server
+admd;5100/tcp;0.000778;# (chili!soft asp admin port) or Yahoo pager
+admdog;5101/tcp;0.005156;# (chili!soft asp)
+admeng;5102/tcp;0.000602;# (chili!soft asp)
+taep-as-svc;5111/tcp;0.000076;# TAEP AS service
+ev-services;5114/tcp;0.000076;# Enterprise Vault Services
+nbt-pc;5133/tcp;0.000076;# Policy Commander
+ctsd;5137/tcp;0.000076;# MyCTS server port
+esri_sde;5151/tcp;0.000152;# ESRI SDE Instance
+sde-discovery;5152/tcp;0.000076;# ESRI SDE Instance Discovery
+aol;5190/tcp;0.004190;# America-Online.  Also can be used by ICQ
+aol-1;5191/tcp;0.000050;# AmericaOnline1
+aol-3;5193/tcp;0.000013;# AmericaOnline3
+targus-getdata;5200/tcp;0.000304;# TARGUS GetData
+targus-getdata1;5201/tcp;0.000076;# TARGUS GetData 1
+targus-getdata2;5202/tcp;0.000076;# TARGUS GetData 2
+3exmp;5221/tcp;0.000228;# 3eTI Extensible Management Protocol for OAMP
+xmpp-client;5222/tcp;0.000380;# XMPP Client Connection
+hpvirtgrp;5223/tcp;0.000152;# HP Virtual Machine Group Management
+hp-server;5225/tcp;0.000760;# HP Server
+hp-status;5226/tcp;0.000760;# HP Status
+sgi-dgl;5232/tcp;0.000050;# SGI Distributed Graphics
+eenet;5234/tcp;0.000076;# EEnet communications
+galaxy-network;5235/tcp;0.000076;# Galaxy Network Service
+soagateway;5250/tcp;0.000076;# soaGateway
+movaz-ssc;5252/tcp;0.000076;# Movaz SSC
+xmpp-server;5269/tcp;0.000380;# XMPP Server Connection
+xmpp-bosh;5280/tcp;0.000304;# Bidirectional-streams Over Synchronous HTTP (BOSH)
+presence;5298/tcp;0.000304;# XMPP Link-Local Messaging
+hacl-hb;5300/tcp;0.000050;# HA cluster heartbeat
+hacl-gs;5301/tcp;0.000025;# HA cluster general services
+hacl-cfg;5302/tcp;0.000025;# HA cluster configuration
+hacl-probe;5303/tcp;0.000013;# HA cluster probing
+mdns;5353/tcp;0.000152;# Multicast DNS
+wsdapi;5357/tcp;0.005474;# Web Services for Devices
+pcduo-old;5400/tcp;0.000050;# RemCon PC-Duo - old port
+pcduo;5405/tcp;0.000314;# RemCon PC-Duo - new port
+statusd;5414/tcp;0.000380;# StatusD
+virtualuser;5423/tcp;0.000076;# VIRTUALUSER
+postgresql;5432/tcp;0.004090;# PostgreSQL database server
+pyrrho;5433/tcp;0.000076;# Pyrrho DBMS
+connect-proxy;5490/tcp;0.000013;# Many HTTP CONNECT proxies
+hotline;5500/tcp;0.000690;# Hotline file sharing client/server
+secureidprop;5510/tcp;0.000339;# ACE/Server services
+sdlog;5520/tcp;0.000125;# ACE/Server services
+sdserv;5530/tcp;0.000038;# ACE/Server services
+sdadmind;5550/tcp;0.000853;# ACE/Server services
+sgi-eventmond;5553/tcp;0.000076;# SGI Eventmond Port
+sgi-esphttp;5554/tcp;0.000076;# SGI ESP HTTP
+farenet;5557/tcp;0.000076;# Sandlab FARENET
+isqlplus;5560/tcp;0.000238;# Oracle web enabled SQL interface (version 10g+)
+westec-connect;5566/tcp;0.000608;# Westec Connect
+tmosms0;5580/tcp;0.000076;# T-Mobile SMS Protocol Message 0
+tmosms1;5581/tcp;0.000076;# T-Mobile SMS Protocol Message 1
+beorl;5633/tcp;0.000380;# BE Operations Request Listener
+nrpe;5666/tcp;0.006614;# Nagios NRPE
+amqp;5672/tcp;0.000076;# AMQP
+rrac;5678/tcp;0.000228;# Remote Replication Agent Connection
+activesync;5679/tcp;0.000590;# Microsoft ActiveSync PDY synchronization
+canna;5680/tcp;0.000151;# Canna (Japanese Input)
+proshareaudio;5713/tcp;0.000013;# proshare conf audio
+prosharevideo;5714/tcp;0.000013;# proshare conf video
+prosharenotify;5717/tcp;0.000013;# proshare conf notify
+dpm;5718/tcp;0.000380;# DPM Communication Server
+dtpt;5721/tcp;0.000076;# Desktop Passthru Service
+msdfsr;5722/tcp;0.000076;# Microsoft DFS Replication Service
+omhs;5723/tcp;0.000076;# Operations Manager - Health Service
+unieng;5730/tcp;0.000228;# Steltor's calendar access
+vnc-http;5800/tcp;0.005947;# Virtual Network Computer HTTP Access, display 0
+vnc-http-1;5801/tcp;0.000841;# Virtual Network Computer HTTP Access, display 1
+vnc-http-2;5802/tcp;0.000276;# Virtual Network Computer HTTP Access, display 2
+vnc-http-3;5803/tcp;0.000125;# Virtual Network Computer HTTP Access, display 3
+spt-automation;5814/tcp;0.000076;# Support Automation
+wherehoo;5859/tcp;0.000304;# WHEREHOO
+vnc;5900/tcp;0.023560;# Virtual Network Computer display 0
+vnc-1;5901/tcp;0.002145;# Virtual Network Computer display 1
+vnc-2;5902/tcp;0.000715;# Virtual Network Computer display 2
+vnc-3;5903/tcp;0.000326;# Virtual Network Computer display 3
+cm;5910/tcp;0.000380;# Context Management
+cpdlc;5911/tcp;0.000380;# Controller Pilot Data Link Communication
+fis;5912/tcp;0.000076;# Flight Information Services
+indy;5963/tcp;0.000304;# Indy Application Server
+ncd-pref-tcp;5977/tcp;0.000075;# NCD preferences tcp port
+ncd-diag-tcp;5978/tcp;0.000050;# NCD diagnostic tcp port
+wsman;5985/tcp;0.000076;# WBEM WS-Management HTTP
+wsmans;5986/tcp;0.000076;# WBEM WS-Management HTTP over TLS/SSL
+wbem-rmi;5987/tcp;0.000380;# WBEM RMI
+wbem-http;5988/tcp;0.000380;# WBEM CIM-XML (HTTP)
+wbem-https;5989/tcp;0.000380;# WBEM CIM-XML (HTTPS)
+ncd-pref;5997/tcp;0.000025;# NCD preferences telnet port
+ncd-diag;5998/tcp;0.000163;# NCD diagnostic telnet port
+ncd-conf;5999/tcp;0.000213;# NCD configuration telnet port
+X11;6000/tcp;0.005683;# X Window server
+X11:1;6001/tcp;0.011730;# X Window server
+X11:2;6002/tcp;0.001518;# X Window server
+X11:3;6003/tcp;0.000351;# X Window server
+X11:4;6004/tcp;0.002597;# X Window server
+X11:5;6005/tcp;0.000602;# X Window server
+X11:6;6006/tcp;0.000188;# X Window server
+X11:7;6007/tcp;0.000238;# X Window server
+X11:8;6008/tcp;0.000125;# X Window server
+X11:9;6009/tcp;0.000201;# X Window server
+x11;6010/tcp;0.000076;# X Window System
+x11;6015/tcp;0.000076;# X Window System
+xmail-ctrl;6017/tcp;0.000088;# XMail CTRL server
+x11;6021/tcp;0.000076;# X Window System
+x11;6025/tcp;0.000228;# X Window System
+x11;6030/tcp;0.000076;# X Window System
+arcserve;6050/tcp;0.000100;# ARCserve agent
+x11;6051/tcp;0.000152;# X Window System
+x11;6052/tcp;0.000076;# X Window System
+x11;6055/tcp;0.000076;# X Window System
+X11:59;6059/tcp;0.000760;# X Window server
+x11;6060/tcp;0.000152;# X Window System
+x11;6062/tcp;0.000076;# X Window System
+x11;6063/tcp;0.000076;# X Window System
+winpharaoh;6065/tcp;0.000076;# WinPharaoh
+gsmp;6068/tcp;0.000152;# GSMP
+konspire2b;6085/tcp;0.000076;# konspire2b p2p network
+synchronet-db;6100/tcp;0.000228;# SynchroNet-db
+backupexec;6101/tcp;0.000452;# Backup Exec UNIX and 95/98/ME Aent
+RETS-or-BackupExec;6103/tcp;0.000125;# Backup Exec Agent Accelerator and Remote Agent also sql server and cisco works blue
+isdninfo;6106/tcp;0.000314;# i4lmond
+softcm;6110/tcp;0.000063;# HP SoftBench CM
+spc;6111/tcp;0.000025;# HP SoftBench Sub-Process Control
+dtspc;6112/tcp;0.001656;# CDE subprocess control
+dayliteserver;6113/tcp;0.000076;# Daylite Server
+xic;6115/tcp;0.000076;# Xic IPC Service
+backup-express;6123/tcp;0.000380;# Backup Express
+meta-corp;6141/tcp;0.000013;# Meta Corporation License Manager
+aspentec-lm;6142/tcp;0.000025;# Aspen Technology License Manager
+watershed-lm;6143/tcp;0.000038;# Watershed License Manager
+statsci2-lm;6145/tcp;0.000025;# StatSci License Manager - 2
+lonewolf-lm;6146/tcp;0.000025;# Lone Wolf Systems License Manager
+montage-lm;6147/tcp;0.000025;# Montage License Manager
+patrol-ism;6161/tcp;0.000076;# PATROL Internet Srv Mgr
+radmind;6222/tcp;0.000151;# Radmind protocol
+tl1-raw-ssl;6251/tcp;0.000076;# TL1 Raw Over SSL/TLS
+gnutella;6346/tcp;0.000226;# Gnutella file sharing protocol
+gnutella2;6347/tcp;0.000050;# Gnutella2 file sharing protocol
+adap;6350/tcp;0.000076;# App Discovery and Access Protocol
+crystalreports;6400/tcp;0.000025;# Seagate Crystal Reports
+crystalenterprise;6401/tcp;0.000050;# Seagate Crystal Enterprise
+servicetags;6481/tcp;0.000152;# Service Tags
+boks;6500/tcp;0.000152;# BoKS Master
+netop-rc;6502/tcp;0.000314;# NetOp Remote Control (by Danware Data A/S)
+boks_clntd;6503/tcp;0.000076;# BoKS Clntd
+mcer-port;6510/tcp;0.000228;# MCER Port
+sane-port;6566/tcp;0.000228;# SANE Control Port
+esp;6567/tcp;0.000228;# eSilo Storage Protocol
+affiliate;6579/tcp;0.000076;# Affiliate
+parsec-master;6580/tcp;0.000380;# Parsec Masterserver
+analogx;6588/tcp;0.000038;# AnalogX HTTP proxy port
+mshvlm;6600/tcp;0.000152;# Microsoft Hyper-V Live Migration
+afesc-mc;6628/tcp;0.000076;# AFE Stock Channel M/C
+radmind;6662/tcp;0.000100;# Radmind protocol (deprecated)
+irc;6665/tcp;0.000050;# Internet Relay Chat
+irc;6666/tcp;0.001179;# internet relay chat server
+irc;6667/tcp;0.000652;# Internet Relay Chat
+irc;6668/tcp;0.000176;# Internet Relay Chat
+irc;6669/tcp;0.000176;# Internet Relay Chat
+irc;6670/tcp;0.000088;# Internet Relay Chat
+tsa;6689/tcp;0.000228;# Tofino Security Appliance
+napster;6699/tcp;0.000251;# Napster File (MP3) sharing  software
+carracho;6700/tcp;0.000025;# Carracho file sharing
+carracho;6701/tcp;0.000038;# Carracho file sharing
+smc-http;6788/tcp;0.000380;# SMC-HTTP
+ibm-db2-admin;6789/tcp;0.000760;# IBM DB2
+bittorrent-tracker;6881/tcp;0.000640;# BitTorrent tracker
+muse;6888/tcp;0.000076;# MUSE
+jetstream;6901/tcp;0.000380;# Novell Jetstream messaging protocol
+afs3-fileserver;7000/tcp;0.001995;# file server itself, msdos
+afs3-callback;7001/tcp;0.000891;# callbacks to cache managers
+afs3-prserver;7002/tcp;0.000351;# users & groups database
+afs3-vlserver;7003/tcp;0.000125;# volume location database
+afs3-kaserver;7004/tcp;0.000201;# AFS/Kerberos authentication service
+afs3-volser;7005/tcp;0.000075;# volume managment server
+afs3-errors;7006/tcp;0.000025;# error interpretation service
+afs3-bos;7007/tcp;0.000314;# basic overseer process
+afs3-update;7008/tcp;0.000025;# server-to-server updater
+afs3-rmtsys;7009/tcp;0.000038;# remote cache manager service
+ups-onlinet;7010/tcp;0.000113;# onlinet uninterruptable power supplies
+vmsvc;7024/tcp;0.000152;# Vormetric service
+vmsvc-2;7025/tcp;0.000228;# Vormetric Service II
+iwg1;7071/tcp;0.000076;# IWGADTS Aircraft Housekeeping Message
+empowerid;7080/tcp;0.000152;# EmpowerID Communication
+font-service;7100/tcp;0.000928;# X Font Service
+elcn;7101/tcp;0.000076;# Embedded Light Control Network
+virprot-lm;7121/tcp;0.000076;# Virtual Prototypes License Manager
+fodms;7200/tcp;0.000439;# FODMS FLIP
+watchme-7272;7272/tcp;0.000152;# WatchMe Monitoring 7272
+openmanage;7273/tcp;0.000050;# Dell OpenManage
+oma-dcdocbs;7278/tcp;0.000152;# OMA Dynamic Content Delivery over CBS
+itactionserver2;7281/tcp;0.000152;# ITACTIONSERVER 2
+swx;7300/tcp;0.000076;# The Swiss Exchange
+swx;7320/tcp;0.000076;# The Swiss Exchange
+swx;7325/tcp;0.000076;# The Swiss Exchange
+icb;7326/tcp;0.000013;# Internet Citizen's Band
+swx;7345/tcp;0.000076;# The Swiss Exchange
+rtps-discovery;7400/tcp;0.000076;# RTPS Discovery
+rtps-dd-mt;7402/tcp;0.000304;# RTPS Data-Distribution Meta-Traffic
+oracleas-https;7443/tcp;0.000304;# Oracle Application Server HTTPS
+pythonds;7464/tcp;0.000013;# Python Documentation Server
+silhouette;7500/tcp;0.000076;# Silhouette User
+ovbus;7501/tcp;0.000076;# HP OpenView Bus Daemon
+qaz;7597/tcp;0.000050;# Quaz trojan worm
+soap-http;7627/tcp;0.000380;# SOAP Service Port
+zen-pawn;7628/tcp;0.000076;# Primary Agent Work Notification
+hddtemp;7634/tcp;0.000025;# A cross-platform hard disk temperature monitoring daemon
+imqbrokerd;7676/tcp;0.000228;# iMQ Broker Rendezvous
+nitrogen;7725/tcp;0.000152;# Nitrogen Service
+scriptview;7741/tcp;0.000380;# ScriptView Network
+raqmon-pdu;7744/tcp;0.000152;# RAQMON PDU
+interwise;7778/tcp;0.000380;# Interwise
+office-tools;7789/tcp;0.000076;# Office Tools Pro Receive
+asr;7800/tcp;0.000228;# Apple Software Restore
+mevent;7900/tcp;0.000152;# Multicast Event
+qo-secure;7913/tcp;0.000152;# QuickObjects secure port
+nsrexecd;7937/tcp;0.001455;# Legato NetWorker
+lgtomapper;7938/tcp;0.001229;# Legato portmapper
+irdmi2;7999/tcp;0.000228;# iRDMI2
+http-alt;8000/tcp;0.009710;# A common alternative http port
+vcom-tunnel;8001/tcp;0.000532;# VCOM Tunnel
+teradataordbms;8002/tcp;0.001216;# Teradata ORDBMS
+mcreport;8003/tcp;0.000076;# Mulberry Connect Reporting Service
+mxi;8005/tcp;0.000076;# MXI Generation II for z/OS
+ajp12;8007/tcp;0.000477;# Apache JServ Protocol 1.x
+http;8008/tcp;0.006843;# IBM HTTP server
+ajp13;8009/tcp;0.004642;# Apache JServ Protocol 1.3
+xmpp;8010/tcp;0.002129;# XMPP File Transfer
+qbdb;8019/tcp;0.000152;# QB DB Dynamic Port
+ftp-proxy;8021/tcp;0.000627;# Common FTP proxy port
+ca-audit-da;8025/tcp;0.000076;# CA Audit Distribution Agent
+fs-agent;8042/tcp;0.000228;# FireScope Agent
+senomix01;8052/tcp;0.000076;# Senomix Timesheets Server
+slnp;8076/tcp;0.000050;# SLNP (Simple Library Network Protocol) by Sisis Informationssysteme GmbH
+http-proxy;8080/tcp;0.042052;# Common HTTP proxy/second web server port
+blackice-icecap;8081/tcp;0.006147;# ICECap user console
+blackice-alerts;8082/tcp;0.000878;# BlackIce Alerts sent to this port
+us-srv;8083/tcp;0.000532;# Utilistor (Server)
+d-s-n;8086/tcp;0.000380;# Distributed SCADA Networking Rendezvous Port
+simplifymedia;8087/tcp;0.000380;# Simplify Media SPP Protocol
+radan-http;8088/tcp;0.000608;# Radan HTTP
+sac;8097/tcp;0.000152;# SAC Port Id
+xprint-server;8100/tcp;0.000304;# Xprint Server
+cp-cluster;8116/tcp;0.000076;# Check Point Clustering
+privoxy;8118/tcp;0.000138;# Privoxy, www.privoxy.org
+polipo;8123/tcp;0.000038;# Polipo open source web proxy cache
+sophos;8192/tcp;0.000760;# Sophos Remote Management System
+sophos;8193/tcp;0.000760;# Sophos Remote Management System
+sophos;8194/tcp;0.000760;# Sophos Remote Management System
+trivnet1;8200/tcp;0.000228;# TRIVNET
+trivnet2;8201/tcp;0.000076;# TRIVNET
+blp3;8292/tcp;0.000228;# Bloomberg professional
+hiperscan-id;8293/tcp;0.000152;# Hiperscan Identification Service
+blp4;8294/tcp;0.000152;# Bloomberg intelligent client
+tmi;8300/tcp;0.000228;# Transport Management Interface
+m2mservices;8383/tcp;0.000228;# M2m Services
+https-alt;8443/tcp;0.009986;# Common alternative https port
+cisco-avp;8470/tcp;0.000076;# Cisco Address Validation Protocol
+pim-port;8471/tcp;0.000076;# PIM over Reliable Transport
+otv;8472/tcp;0.000076;# Overlay Transport Virtualization (OTV)
+noteshare;8474/tcp;0.000076;# AquaMinds NoteShare
+fmtp;8500/tcp;0.000304;# Flight Message Transfer Protocol
+asterix;8600/tcp;0.000380;# Surveillance Data
+sun-as-jmxrmi;8686/tcp;0.000152;# Sun App Server - JMX/RMI
+ultraseek-http;8765/tcp;0.000152;# Ultraseek HTTP
+apple-iphoto;8770/tcp;0.000025;# Apple iPhoto sharing
+sunwebadmin;8800/tcp;0.000228;# Sun Web Server Admin Service
+dxspider;8873/tcp;0.000380;# dxspider linking protocol
+cddbp-alt;8880/tcp;0.000076;# CDDBP
+sun-answerbook;8888/tcp;0.016522;# Sun Answerbook HTTP server.  Or gnump3d streaming music server
+ddi-tcp-2;8889/tcp;0.000152;# Desktop Data TCP 1
+seosload;8892/tcp;0.000038;# From the new Computer Associates eTrust ACX
+jmb-cds1;8900/tcp;0.000076;# JMB-CDS 1
+cumulus-admin;8954/tcp;0.000076;# Cumulus Admin Port
+bctp;8999/tcp;0.000076;# Brodos Crypto Trade Protocol
+cslistener;9000/tcp;0.002129;# CSlistener
+tor-orport;9001/tcp;0.001216;# Tor ORPort
+dynamid;9002/tcp;0.000380;# DynamID authentication
+pichat;9009/tcp;0.000456;# Pichat Server
+sdr;9010/tcp;0.000380;# Secure Data Replicator Protocol
+tambora;9020/tcp;0.000076;# TAMBORA
+panagolin-ident;9021/tcp;0.000076;# Pangolin Identification
+paragent;9022/tcp;0.000076;# PrivateArk Remote Agent
+tor-trans;9040/tcp;0.000301;# Tor TransPort, www.torproject.org
+tor-socks;9050/tcp;0.000703;# Tor SocksPort, www.torproject.org
+tor-control;9051/tcp;0.000025;# Tor ControlPort, www.torproject.org
+glrpc;9080/tcp;0.000380;# Groove GLRPC
+aurora;9084/tcp;0.000076;# IBM AURORA Performance Visualizer
+zeus-admin;9090/tcp;0.002747;# Zeus admin server
+jetdirect;9100/tcp;0.003287;# HP JetDirect card
+jetdirect;9101/tcp;0.000602;# HP JetDirect card
+jetdirect;9102/tcp;0.002133;# HP JetDirect card. Also used (and officially registered for) Bacula File Daemon (an open source backup system)
+jetdirect;9103/tcp;0.000188;# HP JetDirect card
+jetdirect;9104/tcp;0.000050;# HP JetDirect card
+jetdirect;9105/tcp;0.000038;# HP JetDirect card
+jetdirect;9106/tcp;0.000038;# HP JetDirect card
+jetdirect;9107/tcp;0.000038;# HP JetDirect card
+DragonIDSConsole;9111/tcp;0.000251;# Dragon IDS Console
+dddp;9131/tcp;0.000076;# Dynamic Device Discovery
+sun-as-jpda;9191/tcp;0.000152;# Sun AppSvr JPDA
+wap-wsp;9200/tcp;0.000228;# WAP connectionless session services
+wap-wsp-s;9202/tcp;0.000076;# WAP secure connectionless session service
+wap-vcal-s;9207/tcp;0.000532;# WAP vCal Secure
+oma-mlp;9210/tcp;0.000076;# OMA Mobile Location Protocol
+oma-mlp-s;9211/tcp;0.000076;# OMA Mobile Location Protocol Secure
+cumulus;9287/tcp;0.000076;# Cumulus
+vrace;9300/tcp;0.000076;# Virtual Racing Service
+mpidcmgr;9343/tcp;0.000076;# MpIdcMgr
+sec-t4net-srv;9400/tcp;0.000076;# Samsung Twain for Network Server
+git;9418/tcp;0.000228;# Git revision control system
+tungsten-https;9443/tcp;0.000152;# WSO2 Tungsten HTTPS
+wso2esb-console;9444/tcp;0.000152;# WSO2 ESB Administration Console HTTPS
+ldgateway;9592/tcp;0.000076;# LANDesk Gateway
+cba8;9593/tcp;0.000760;# LANDesk Management Agent (cba8)
+msgsys;9594/tcp;0.000760;# Message System
+pds;9595/tcp;0.000760;# Ping Discovery System
+micromuse-ncpw;9600/tcp;0.000152;# MICROMUSE-NCPW
+erunbook_agent;9616/tcp;0.000076;# eRunbook Agent
+condor;9618/tcp;0.000380;# Condor Collector Service
+odbcpathway;9628/tcp;0.000076;# ODBC Pathway Service
+xmms2;9667/tcp;0.000076;# Cross-platform Music Multiplexing System
+client-wakeup;9694/tcp;0.000076;# T-Mobile Client Wakeup Message
+board-roar;9700/tcp;0.000076;# Board M.I.T. Service
+sapv1;9875/tcp;0.000076;# Session Announcement v1
+sd;9876/tcp;0.000602;# Session Director
+monkeycom;9898/tcp;0.000228;# MonkeyCom
+iua;9900/tcp;0.000380;# IUA
+sype-transport;9911/tcp;0.000076;# SYPECom Transport Protocol
+nping-echo;9929/tcp;0.000163;# Nping echo server mode - http://nmap.org/book/nping-man-echo-mode.html - The port frequency is made up to keep it (barely) in top 1000 TCP
+apc-9950;9950/tcp;0.000076;# APC 9950
+nsesrvr;9988/tcp;0.000152;# Software Essentials Secure HTTP server
+osm-appsrvr;9990/tcp;0.000076;# OSM Applet Server
+issa;9991/tcp;0.000063;# ISS System Scanner Agent
+issc;9992/tcp;0.000138;# ISS System Scanner Console
+palace-4;9995/tcp;0.000076;# Palace-4
+distinct32;9998/tcp;0.000304;# Distinct32
+abyss;9999/tcp;0.004441;# Abyss web server remote web management interface
+snet-sensor-mgmt;10000/tcp;0.011692;# SecureNet Pro Sensor https management server or apple airport admin
+scp-config;10001/tcp;0.001292;# SCP Configuration
+documentum;10002/tcp;0.000380;# EMC-Documentum Content Server Product
+documentum_s;10003/tcp;0.000228;# EMC-Documentum Content Server Product
+emcrmirccd;10004/tcp;0.000304;# EMC Replication Manager Client
+stel;10005/tcp;0.000151;# Secure telnet
+mvs-capacity;10007/tcp;0.000076;# MVS Capacity
+octopus;10008/tcp;0.000152;# Octopus Multiplexer
+swdtp-sv;10009/tcp;0.000228;# Systemwalker Desktop Patrol
+rxapi;10010/tcp;0.002889;# ooRexx rxapi services
+amandaidx;10082/tcp;0.000213;# Amanda indexing
+amidxtape;10083/tcp;0.000125;# Amanda tape indexing
+ezmeeting-2;10101/tcp;0.000076;# eZmeeting
+netiq-endpt;10115/tcp;0.000076;# NetIQ Endpoint
+qb-db-server;10160/tcp;0.000152;# QB Database Server
+irisa;11000/tcp;0.000076;# IRISA
+metasys;11001/tcp;0.000076;# Metasys
+vce;11111/tcp;0.000228;# Viral Computing Environment (VCE)
+pksd;11371/tcp;0.000038;# PGP Public Key Server
+sysinfo-sp;11967/tcp;0.000380;# SysInfo Service Protocol
+cce4x;12000/tcp;0.000427;# ClearCommerce Engine 4.x (www.clearcommerce.com)
+entextnetwk;12001/tcp;0.000076;# IBM Enterprise Extender SNA COS Network Priority
+entexthigh;12002/tcp;0.000076;# IBM Enterprise Extender SNA COS High Priority
+dbisamserver1;12005/tcp;0.000076;# DBISAM Database Server - Regular
+dbisamserver2;12006/tcp;0.000152;# DBISAM Database Server - Admin
+nupaper-ss;12121/tcp;0.000076;# NuPaper Session Service
+netbus;12345/tcp;0.000527;# NetBus backdoor trojan or Trend Micro Office Scan
+netbus;12346/tcp;0.000088;# NetBus backdoor trojan
+netbackup;13701/tcp;0.000013;# vmd           server
+netbackup;13713/tcp;0.000025;# tl4d          server
+netbackup;13714/tcp;0.000013;# tsdd          server
+netbackup;13715/tcp;0.000013;# tshd          server
+netbackup;13718/tcp;0.000013;# lmfcd         server
+netbackup;13720/tcp;0.000038;# bprd          server
+netbackup;13721/tcp;0.000013;# bpdbm         server
+netbackup;13722/tcp;0.000314;# bpjava-msvc   client
+vnetd;13724/tcp;0.000152;# Veritas Network Utility
+netbackup;13782/tcp;0.000728;# bpcd          client
+netbackup;13783/tcp;0.000389;# vopied        client
+scotty-ft;14000/tcp;0.000380;# SCOTTY High-Speed Filetransfer
+sua;14001/tcp;0.000076;# SUA
+bo2k;14141/tcp;0.000038;# Back Orifice 2K BoPeep mouse/keyboard input
+hydap;15000/tcp;0.001064;# Hypack Hydrographic Software Packages Data Acquisition
+bo2k;15151/tcp;0.000013;# Back Orifice 2K BoPeep video output
+bex-xr;15660/tcp;0.000380;# Backup Express Restore Server
+fmsas;16000/tcp;0.000228;# Administration Server Access
+fmsascon;16001/tcp;0.000380;# Administration Server Connector
+osxwebadmin;16080/tcp;0.000251;# Apple OS X WebAdmin
+sun-sea-port;16161/tcp;0.000076;# Solaris SEA Port
+overnet;16444/tcp;0.000025;# Overnet file sharing
+newbay-snc-mc;16900/tcp;0.000076;# Newbay Mobile Client Update Service
+amt-soap-http;16992/tcp;0.000760;# Intel(R) AMT SOAP/HTTP
+amt-soap-https;16993/tcp;0.000760;# Intel(R) AMT SOAP/HTTPS
+kuang2;17300/tcp;0.000013;# Kuang2 backdoor
+db-lsp;17500/tcp;0.000076;# Dropbox LanSync Protocol
+biimenu;18000/tcp;0.000138;# Beckman Instruments, Inc.
+opsec-cvp;18181/tcp;0.000025;# Check Point OPSEC
+opsec-ufp;18182/tcp;0.000038;# Check Point OPSEC
+opsec-sam;18183/tcp;0.000025;# Check Point OPSEC
+opsec-lea;18184/tcp;0.000038;# Check Point OPSEC
+opsec-ela;18187/tcp;0.000013;# Check Point OPSEC
+gkrellm;19150/tcp;0.000013;# GKrellM remote system activity meter daemon
+keysrvr;19283/tcp;0.000304;# Key Server for SASSAFRAS
+keyshadow;19315/tcp;0.000304;# Key Shadow for SASSAFRAS
+dnp;20000/tcp;0.000380;# DNP
+microsan;20001/tcp;0.000076;# MicroSAN
+commtact-http;20002/tcp;0.000152;# Commtact HTTP
+btx;20005/tcp;0.000401;# xcept4 (Interacts with German Telekom's CEPT videotext service)
+ipulse-ics;20222/tcp;0.000380;# iPulse-ICS
+dcap;22125/tcp;0.000076;# dCache Access Protocol
+gsidcap;22128/tcp;0.000076;# GSI dCache Access Protocol
+wnn6;22273/tcp;0.000075;# Wnn6 (Japanese input)
+CodeMeter;22350/tcp;0.000076;# CodeMeter Standard
+vocaltec-wconf;22555/tcp;0.000076;# Vocaltec Web Conference
+binkp;24554/tcp;0.000076;# BINKP
+minecraft;25565/tcp;0.000076;# A video game - http://en.wikipedia.org/wiki/Minecraft
+wnn6_DS;26208/tcp;0.000025;# Wnn6 (Dserver)
+flexlm0;27000/tcp;0.000640;# FlexLM license manager additional ports
+flexlm1;27001/tcp;0.000075;# FlexLM license manager additional ports
+flexlm2;27002/tcp;0.000013;# FlexLM license manager additional ports
+flexlm3;27003/tcp;0.000013;# FlexLM license manager additional ports
+flexlm5;27005/tcp;0.000013;# FlexLM license manager additional ports
+flexlm7;27007/tcp;0.000013;# FlexLM license manager additional ports
+flexlm9;27009/tcp;0.000013;# FlexLM license manager additional ports
+flexlm10;27010/tcp;0.000063;# FlexLM license manager additional ports
+subseven;27374/tcp;0.000050;# Subseven Windows trojan
+Trinoo_Master;27665/tcp;0.000038;# Trinoo distributed attack tool Master server control port
+pago-services1;30001/tcp;0.000076;# Pago Services 1
+Elite;31337/tcp;0.000163;# Sometimes interesting stuff can be found here
+boinc;31416/tcp;0.000075;# BOINC Client Control
+filenet-powsrm;32767/tcp;0.000076;# FileNet BPM WS-ReliableMessaging Client
+filenet-tms;32768/tcp;0.009199;# Filenet TMS
+filenet-rpc;32769/tcp;0.000760;# Filenet RPC
+sometimes-rpc3;32770/tcp;0.000903;# Sometimes an RPC port on my Solaris box
+sometimes-rpc5;32771/tcp;0.001367;# Sometimes an RPC port on my Solaris box (rusersd)
+sometimes-rpc7;32772/tcp;0.000891;# Sometimes an RPC port on my Solaris box (status)
+sometimes-rpc9;32773/tcp;0.000602;# Sometimes an RPC port on my Solaris box (rquotad)
+sometimes-rpc11;32774/tcp;0.000602;# Sometimes an RPC port on my Solaris box (rusersd)
+sometimes-rpc13;32775/tcp;0.000427;# Sometimes an RPC port on my Solaris box (status)
+sometimes-rpc15;32776/tcp;0.000364;# Sometimes an RPC port on my Solaris box (sprayd)
+sometimes-rpc17;32777/tcp;0.000301;# Sometimes an RPC port on my Solaris box (walld)
+sometimes-rpc19;32778/tcp;0.000289;# Sometimes an RPC port on my Solaris box (rstatd)
+sometimes-rpc21;32779/tcp;0.000301;# Sometimes an RPC port on my Solaris box
+sometimes-rpc23;32780/tcp;0.000263;# Sometimes an RPC port on my Solaris box
+sometimes-rpc25;32786/tcp;0.000075;# Sometimes an RPC port (mountd)
+sometimes-rpc27;32787/tcp;0.000075;# Sometimes an RPC port dmispd (DMI Service Provider)
+safetynetp;40000/tcp;0.000152;# SafetyNET p
+crestron-cip;41794/tcp;0.000076;# Crestron Control Port
+crestron-ctp;41795/tcp;0.000076;# Crestron Terminal Port
+caerpc;42510/tcp;0.000988;# CA eTrust RPC
+tinyfw;44334/tcp;0.000088;# tiny personal firewall admin port
+coldfusion-auth;44442/tcp;0.000163;# ColdFusion Advanced Security/Siteminder Authentication Port (by Allaire/Netegrity)
+coldfusion-auth;44443/tcp;0.000201;# ColdFusion Advanced Security/Siteminder Authentication Port (by Allaire/Netegrity)
+dbbrowse;47557/tcp;0.000038;# Databeam Corporation
+directplaysrvr;47624/tcp;0.000076;# Direct Play Server
+ap;47806/tcp;0.000076;# ALC Protocol
+Memecache;11211/tcp;0.000075;# Back Orifice 2K Default Port
+hadoop;50070/tcp;0.000075;# Back Orifice 2K Default Port
+compaqdiag;49400/tcp;0.000276;# Compaq Web-based management
+ibm-db2;50000/tcp;0.001317;# (also Internet/Intranet Input Method Server Framework?)
+iiimsf;50002/tcp;0.000351;# Internet/Intranet Input Method Server Framework
+telnet;23/tcp;0.000351;# Internet/Intranet Input Method Server Framework
+zookeeper;2181/tcp;0.000075;# Back Orifice 2K Default Port
+elasticsearch;9200/tcp;0.000075;# Back Orifice 2K Default Port
+SXF_SSH;22345/tcp;0.000075;# Back Orifice 2K Default Port
+Rundeck;4440/tcp;0.000075;# Back Orifice 2K Default Port
+Mongo;27017/tcp;0.000075;# Back Orifice 2K Default Port
+bo2k;54320/tcp;0.000075;# Back Orifice 2K Default Port
+redis;6379/tcp;0.000075;# Back Orifice 2K Default Port
+iphone-sync;62078/tcp;0.000304;# Apparently used by iPhone while syncing - http://code.google.com/p/iphone-elite/source/browse/wiki/Port_62078.wiki
