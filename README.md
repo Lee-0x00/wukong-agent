@@ -6,6 +6,7 @@
 
 
 ## Introduce   
+```
 1.扫描器AGENT端架构:python+flower+celery+redis    
 2.目前主要模块:   
 awvs：["taskid-23","www.baidu.com"]   
@@ -18,7 +19,7 @@ POC：["taskid-23","www.baidu.com","插件名称"]
 4.可分布式部署  
 5.可接入第三方扫描工具  
 6.跨平台运行
-
+```
 
 ## libraries(安装工具)
 
