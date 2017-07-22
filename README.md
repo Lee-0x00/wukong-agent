@@ -1,7 +1,11 @@
 悟空扫描器
----
+---  
 
-#### Introduce   
+## Frame  
+![悟空架构图](https://raw.githubusercontent.com/Canbing007/wukong/master/wukong.png)  
+
+
+## Introduce   
 1.扫描器AGENT端架构:python+flower+celery+redis    
 2.目前主要模块:   
 awvs：["taskid-23","www.baidu.com"]   
@@ -16,7 +20,7 @@ POC：["taskid-23","www.baidu.com","插件名称"]
 6.跨平台运行
 
 
-#### libraries(安装工具)
+## libraries(安装工具)
 
 ```
 apt-get -y install dnsutils  
@@ -39,7 +43,8 @@ pip install --upgrade ndg-httpsclient
 
 
 ```
-#### Dir list(目录结构)
+
+## Dir list(目录结构)  
 ```
 │  tasks.py 						#celery任务文件
 │  __init__.py
@@ -80,7 +85,7 @@ pip install --upgrade ndg-httpsclient
 
 ```
 
-#### Plugins(插件编写)
+## Plugins(插件编写)
 
 ```
 #!/user/bin python
@@ -132,7 +137,7 @@ class WuKong(object):
 
 
 
-#### Usage(使用方式)
+## Usage(使用方式)
 ```
 - 配置supervisor的启动项
 - 修改core/settings.py 文件配置信息
@@ -176,9 +181,10 @@ curl -X POST -d 'terminate=True' http://192.168.10.128:8080/api/task/revoke/a936
 ```
 
 
-#### Todo
-1.带编写web服务端 
+## Todo
+1.待编写web服务端   
 2.爆破模款(字典配置)和poc模块(cookie设置)调整
+
 
 
 
