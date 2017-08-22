@@ -8,15 +8,85 @@
 import sys
 sys.path.append("..")
 
-import re,smtplib,os
+import re,smtplib,os,random,time
 from email.mime.text import MIMEText
 import dns.resolver,requests
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 
-from core.settings import talscan_config,POC_PATH,dict_script_path
+from core.settings import *
 
-#**************************************************request 请求配置********************************************************************
+
+#**************************************************random generate bugid********************************************************************
+def bug_HashId(prefix):
+    times = time.strftime("%Y%m%d", time.localtime())
+
+    test = ""
+    for i in range(0,6):
+        test += str(random.randint(0,9))
+    result = prefix +"-"+ str(times)+"-{0}".format(test)
+    return result
+
+def try_Int(arg,default):
+    try:
+        arg = int(arg)
+    except Exception as e:
+        arg = default
+    return arg
+
+def try_Str(arg,default):
+    try:
+        arg = str(arg)
+    except Exception as e:
+        arg = default
+    return arg
+
+#*************************************************poc or dict ********************************************************************
+def get_web_poc( module , scan_type): 
+    subprefix = []
+    files = os.listdir(PLUGIN_PATH)
+    pattern = '^(' + module + '_).*?' + scan_type + '.*?\.py$'  
+    #pattern = '.*?'+user_input+'.*?\.py$'
+    regex = re.compile(pattern) 
+    
+    for item in files:
+        match = regex.search(item) 
+        if match and item != '__init__.py':
+            subprefix.append((len(match.group()), match.start(), PLUGIN_PATH + item))
+    return [x for _, _, x in sorted(subprefix)]
+
+
+#print get_web_poc("brute","")
+
+def get_brute_dict( poc_file):
+
+    filename = poc_file.split("plugins")[1]
+    module = filename.split("_")[0][1:]
+    scan_type =  filename.split("_")[1]
+
+    subprefix = []
+    files = os.listdir(DICT_PATH)
+    poc_dict_filename = module + '-' + scan_type + '.txt' 
+
+    for item in files :
+        if poc_dict_filename == item :
+            filename_path = DICT_PATH + str(item)
+            if "subdomain" == str(scan_type) or "redis" == str(scan_type):
+                with open(filename_path,"r") as server:
+                    for finger in server.readlines():
+                        subprefix.append(finger.strip())
+            else:
+                with open(filename_path,"r") as server:
+                    for finger in server.readlines():
+                        test = finger.strip().split(":")
+                        subprefix.append((test[0],test[1]))
+                                      
+    return {}.fromkeys(subprefix).keys()
+
+#print get_brute_dict("M:\\wukong_agent\\plugins\\brute_qqmail_20170713.py")
+
+
+#**************************************************request configure********************************************************************
 
 USER_AGENTS = [
     "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_3) AppleWebKit/535.20 (KHTML, like Gecko) Chrome/19.0.1036.7 Safari/535.20",
@@ -61,7 +131,7 @@ headers = {
 if talscan_config["allow_http_session"]:
     requests = requests.Session()
 
-#get请求
+
 def http_request_get(url, body_content_workflow=True, allow_redirects= talscan_config["allow_redirects"], custom_cookie= talscan_config["custom_cookie"]):
     try:
         if talscan_config["custom_cookie"]:
@@ -71,7 +141,7 @@ def http_request_get(url, body_content_workflow=True, allow_redirects= talscan_c
     except Exception, e:
         return ""
 
-#post请求
+
 def http_request_post(url, payload, body_content_workflow=True, allow_redirects= talscan_config["allow_redirects"], custom_cookie= talscan_config["custom_cookie"]):
     try:
         if talscan_config["custom_cookie"]:
@@ -82,59 +152,10 @@ def http_request_post(url, payload, body_content_workflow=True, allow_redirects=
         return ""
 
 
-#**************************************************poc or dict 本地查找********************************************************************
-def get_web_poc( module , scan_type): 
-	suggestions = []
-	files = os.listdir(POC_PATH)
-	pattern = '^(' + module + '_).*?' + scan_type + '.*?\.py$'  
-	#pattern = '.*?'+user_input+'.*?\.py$'
-	regex = re.compile(pattern) 
-	for item in files:
-		match = regex.search(item) 
-		if match and item != '__init__.py':
-			suggestions.append((len(match.group()), match.start(), POC_PATH+'/'+item))
-	return [x for _, _, x in sorted(suggestions)]
+#**************************************************mail configure ********************************************************************
 
-
-def get_dict(poc_name):
-    pattern = 'brute_(.*)_.*?\.py$' 
-    poc_dict_filename = re.findall(pattern,poc_name)[0]
-    subprefix = []
-    #也可以改成 post：poc_dict_filename 到api 获取不同类型的数值
-    files = os.listdir(dict_script_path)
-    for item in files :
-        if poc_dict_filename in item and poc_dict_filename == "subdomain" :
-            filename_path = dict_script_path + str(item)
-            with open(filename_path,"r") as server:
-                for finger in server.readlines():
-                    subprefix.append(finger.strip())
-        if poc_dict_filename in item and poc_dict_filename == "redis" :
-            filename_path = dict_script_path + str(item)
-            with open(filename_path,"r") as server:
-                for finger in server.readlines():
-                    subprefix.append(finger.strip())
-
-        if poc_dict_filename in item and poc_dict_filename == "qqmail" :
-            filename_path = dict_script_path + str(item)
-            with open(filename_path,"r") as server:
-                for finger in server.readlines():
-                    test = finger.strip().split(":")
-                    subprefix.append((test[0],test[1]))
-
-        # if poc_dict_filename in item and poc_dict_filename == "subdomain" :
-        #     filename_path = dict_script_path + str(item)
-        #     with open(filename_path,"r") as server:
-        #         for finger in server.readlines():
-        #             subprefix.append(finger.strip())
-    return subprefix
-
-#print get_dict("brute_qqmail_12532324.py")
-
-
-#************************************************** 邮箱功能 ********************************************************************
-
-def mail_notify(title = "Talscan Notice !!! " , content = " " , mailto_list = ['test@100tal.com']):
-    me="talscan" + "<" + mail_user + "@" + mail_postfix +">"
+def mail_notify(title = "Talscan Notice !!! " , content = " " , mailto_list = ['test@qq.com']):
+    me="talscan" + "<" + talscan_config['mail_user'] + "@" + talscan_config['mail_postfix'] +">"
     contents = """
         <html>
         <head>
@@ -147,8 +168,8 @@ def mail_notify(title = "Talscan Notice !!! " , content = " " , mailto_list = ['
         <body>  
         <div style="margin:auto;margin_top:50px;">
             <p>
-                <h1>欢迎来到好未来扫描平台！！!</h1>
-                <br><br>%s</span>请到数据库进行收账。。。  过期不候!
+                <h1>welcome to wukong platform！！!</h1>
+                <br><br>%s</span>I get a result that you scan。。。  please check it!
             </p>
         </div>
         </body>  
@@ -161,8 +182,8 @@ def mail_notify(title = "Talscan Notice !!! " , content = " " , mailto_list = ['
     msg['To'] = ";".join(mailto_list)
     try:
         server = smtplib.SMTP()
-        server.connect(mail_host)
-        server.login(mail_user,mail_pass)
+        server.connect(talscan_config['mail_host'])
+        server.login(talscan_config['mail_user'],talscan_config['mail_pass'])
         server.sendmail(me, mailto_list, msg.as_string())
         server.close()
         return True
@@ -170,5 +191,4 @@ def mail_notify(title = "Talscan Notice !!! " , content = " " , mailto_list = ['
         print str(e)
         return False
 
-#mail_notify(taskid = "test" , title = "Talscan Notice !!! " , content = "Welcome to Talscan platfrom ... " , mailto_list = ['security@100tal.com'])
 

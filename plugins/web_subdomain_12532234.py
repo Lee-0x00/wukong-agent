@@ -8,8 +8,10 @@ import sys
 sys.path.append("..")
 
 from common.captcha import Captcha
-from common.wukong_Func import *
-from common.wukong_TypeCheck import *
+from common.func import *
+from common.check import *
+
+import json,re,subprocess,time
 
 from random import Random,uniform
 from urllib import quote
@@ -27,32 +29,23 @@ def random_str(randomlength=8):
     return rstr.lower()
 
 class WuKong(object):
-    def __init__(self,  target = "" ):
+    def __init__(self,  target = "", args = ""):
         self.target = target
+        self.cookies = args["cookies"]
+        
         self.token = ""
         self.subjects = []
         self.hashs = []
         self.num_result = 0
         self.website = 'https://www.google.com/transparencyreport/jsonp/ct'
         self.result = {
-        "bug_author" : "Bing",
-        "bug_name" : "Google subdomain api",
-        "bug_summary" : "Subdomain search", 
-        "bug_level" : "Normal" , 
-        "bug_detail" : [] ,
-        "bug_repair" : "none"
+            "bug_author" : "Bing",
+            "bug_name" : "Google subdomain api",
+            "bug_summary" : "Subdomain search", 
+            "bug_level" : "Normal" , 
+            "bug_detail" : [] ,
+            "bug_repair" : "none"
         }
-
-    def run(self):
-        if is_domain(self.target) == False :
-            return []
-        target = '.'.join(self.target.split(".")[1:])
-        self.parser_subject(target)
-        self.hashs = list(set(self.hashs)) # unique sort hash
-        self.parser_dnsname()
-        self.result["bug_detail"] = list(set(self.result["bug_detail"]))
-        #self.subjects = list(set(self.subjects))
-        return 0
 
     def parser_subject(self,target):
         try:
@@ -85,10 +78,20 @@ class WuKong(object):
                     self.subjects.append(result.get('result').get('subject').encode("gbk"))
                 if result.get('result').get('dnsNames'):
                     self.result["bug_detail"].extend(result.get('result').get('dnsNames').encode("gbk"))
-            except Exception as e:
+            except:
                 pass
             random_sleep()
+            
+    def exploit(self):
+        if is_Domain(self.target) == False :
+            return []
+        target = '.'.join(self.target.split(".")[1:])
+        self.parser_subject(target)
+        self.hashs = list(set(self.hashs)) # unique sort hash
+        self.parser_dnsname()
+        self.result["bug_detail"] = list(set(self.result["bug_detail"]))
 
-# netcraft = WuKong(target='www.lagou.com')
-# netcraft.run()
-# print netcraft.result
+
+# netcraft = WuKong(target ='www.aliyun.com',args = {"cookies":"" , "user_pass": "" , "args" : "www" })
+# netcraft.exploit()
+# print netcraft.result 

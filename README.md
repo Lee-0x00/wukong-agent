@@ -1,123 +1,141 @@
-悟空扫描器
----  
+# Wukong Scanner Agent v1
+---
 
-## Frame  
-![悟空架构图](https://raw.githubusercontent.com/Canbing007/wukong/master/wukong.png)  
+## Requisites
+
+- python
+- redis
+- awvs api
+- nessus api
+
+## Structure
+
+![wukong_structure.png](http://upload-images.jianshu.io/upload_images/2693750-90800cae74c39f4a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-## Introduce   
+## Introduce
+
+- system structure : python + flower + celery + redis   
+- Cross platform operation
+- The current module as the following :   
+	- awvs : Awvs scanner
+	- nessus :  Nessus scanner  
+	- brute :  System service account password burst test    
+	- web : System web service vulnerability test   
+	- pscan : Port scans
+
+- Custom plug-in  
+- It can distributed deployment  
+- It access to third-party scanning tools
+
+
+## Installation
+
+- modify setting.py as the following
 ```
-1.扫描器AGENT端架构:python+flower+celery+redis    
-2.目前主要模块:   
-awvs：["taskid-23","www.baidu.com"]   
-nessus：["taskid-23","www.baidu.com"]   
-爆破：["taskid-23","www.baidu.com"]		 		目前仅redis可自己添加其他插件    
-POC：["taskid-23","www.baidu.com","插件名称"]   
-端口：["taskid-23","www.baidu.com"]   
+redis_host = 'localhost'	#your redis address
+redis_port = 6379			#your redis port
+redis_pwd = ''				#your redis password
 
-3.可自定义添加在爆破和POC模块添加插件；插件模块设置见下面描述    
-4.可分布式部署  
-5.可接入第三方扫描工具  
-6.跨平台运行
-```
+"awvs_url" : "127.0.0.1" ,  #your awvs host
+"awvs_port" : 8183 ,		#your awvs password
 
-## libraries(安装工具)
-
-```
-apt-get -y install dnsutils  
-apt-get -y install phantomjs  
-apt-get install -y net-tools  
-apt-get -y install python
-apt-get -y install redis-server  
-apt-get install -y -q python-pip  
-
-pip install -r requirements.txt
-pip install celery
-pip install flower
-pip install supervisor
-
-* windows下celery 必须是3版本，flower必须下载安装
-pip install celery==3.1.25
-
-* Mac使用requests请求htpps链接时，返回错误或延长时间；需要安装
-pip install --upgrade ndg-httpsclient
-
-
-```
-
-## Dir list(目录结构)  
-```
-│  tasks.py 						#celery任务文件
-│  __init__.py
-│
-├─common
-│      captcha.py 					#获取验证码为文件
-│      wukong_Func.py 				#公共函数调用
-│      wukong_TypeCheck.py 			#数据格式验证
-│      __init__.py
-│
-├─core
-│      settings.py 					#主要配置文件
-│      __init__.py
-│
-├─dictionary
-│      brute-qqmail.txt 			#qqmail爆破字典
-│      brute-redis.txt 				#redis爆破字典
-│      brute-subdomain.txt 			#子域名爆破字典
-│      nmap-services.txt 			#nmap端口指纹
-│      __init__.py
-│
-├─libraries
-│      awvs.py 						#awvs主程序
-│      brute.py 					#爆破主程序; todo:待修改获取参数接口，添加一个获取参数功能
-│      github.py 					#github泄露搜索主程序
-│      nessus.py 					#nessus主程序
-│      pscan.py                     #端口扫描主程序
-│      web.py 						#通用型poc扫描住程序
-│      __init__.py
-│
-└─plugins
-        brute_qqmail_20170713.py 	#qqmail爆破插件
-        brute_redis_20170713.py     #redis爆破插件
-        brute_subdomain_12532324.py
-        web_dnszonetransfer_12531324.py #通用型DNS区域传送漏洞插件
-        web_subdomain-20170620.py       #通用型子域名httpapi插件
-        web_subdomain-20170627.py
-
+"nessus_url" : "https://xxx.com" ,	#your nessus host
+"nessus_name" : "xx" ,			#your nessus user
+"nessus_pass" : "xx" ,	#your nessus password
 ```
 
-## Plugins(插件编写)
+
+## Usage
+
+- runing on the server
+
+```
+start server:
+celery -A tasks worker --loglevel=info --concurrency=10
+celery flower --port=8080 --broker=redis://127.0.0.1:6379/0
+#celery flower --port=8080 --broker=redis://:password@127.0.0.1:6379/0
+#celery flower --port=8080 --broker=redis://127.0.0.1:6379/0 --basic_auth=xx:xx
+
+send task:
+curl -X POST -d '{"args":["taskid-23","www.baidu.com"]}' http://127.0.0.1:8080/api/task/send-task/tasks.pscan
+curl -X POST -d '{"args":["taskid-23","www.baidu.com","web"]}' http://127.0.0.1:8080/api/task/send-task/tasks.brute
+```
+
+- runing on the console
+
+```
+python wukong.py -d 100.xueersi.com -m pscan    	#port scans
+python wukong.py -d 100.xueersi.com -m nessus       #nessus scans
+python wukong.py -d 100.xueersi.com -m awvs 		#awvs scans
+python wukong.py -d 100.xueersi.com -m web 			#all zero day vulnerability scans 
+python wukong.py -d 100.xueersi.com -m brute 		#all brute service vulnerability scans 
+python wukong.py -d 100.xueersi.com -m brute -c SESSION=232		#all brute service vulnerability scans by cookie
+python wukong.py -d 100.xueersi.com -m web -t subdomain 	#subdomain scans by webapi
+python wukong.py -d 100.xueersi.com -m brute -t subdomain 	#subdomain scans by brute
+python wukong.py -d 100.xueersi.com -m all 		    #scan all the weaknesses
+```
+
+- running screenshot as the following
+
+wukong agent console
+
+![wukong_console.png](http://upload-images.jianshu.io/upload_images/2693750-2b7f18db8fc5c39c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+wukong web api
+
+![celery.png](http://upload-images.jianshu.io/upload_images/2693750-5f4f3310ff3426b5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![flower.png](http://upload-images.jianshu.io/upload_images/2693750-a43c2c1b397703ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![send_task.png](http://upload-images.jianshu.io/upload_images/2693750-4af9c91031a1e071.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![flower_result.png](http://upload-images.jianshu.io/upload_images/2693750-898fd9930788bb3b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+![wukong_agent_result.png](http://upload-images.jianshu.io/upload_images/2693750-c5f30bbfe23dc2d4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
+
+## Custom plug-in
 
 ```
 #!/user/bin python
 # -*- coding:utf-8 -*- 
-# Author: 作者
-# Contact: xx@outlook.com
-# DateTime: 2016-12-21 11:46:49
+# Author:Bing
+# Contact:amazing_bing@outlook.com
 # Description:  coding 
 
 import sys
 sys.path.append("..")
 
-from common.captcha import Captcha    #验证码功能
-from common.wukong_Func import *      #通用功能
-from common.wukong_TypeCheck import * #格式验证功能
+from common.captcha import Captcha 	# Captcha 
+from common.func import * 			# Common function
+from common.check import * 			# Common format validation 
+
+import json,re,subprocess,time
 
 class WuKong(object):
-    def __init__(self,  target = ""):
+	'''
+	args = { "cookies": cookie , "user_pass": ( "username" , "password" ) , "args" : "" }
+	# cookies : it is your cookie
+	# user_pass : it is username and password 
+	# args : it could be a path,a subdomain prefix , a WEB fingerprint as  x.php / www / discuz! 2.3x etc ...  depending on your poc type
+	'''
+    def __init__(self,  target = "", args = ""):  	
         self.target = target
+        self.cookies = args["cookies"]
+        
         self.website = "https://www.threatminer.org"
         self.result = {
-        "bug_author" : "作者",
-        "bug_name" : "POC名称",
-        "bug_summary" : "POC简介", 
-        "bug_level" : "危害等级" , 
-        "bug_detail" : [] ,
-        "bug_repair" : "修复建议"
+            "bug_author" : "Bing",
+            "bug_name" : "Threatminer subdomain api",
+            "bug_summary" : "Subdomain search", 
+            "bug_level" : "Normal" , 
+            "bug_detail" : [] ,
+            "bug_repair" : "none"
         }
     
-    def run(self):
-        if is_domain(self.target) == False :
+    def exploit(self):
+        if is_Domain(self.target) == False :
             return []
 
         target = str(".".join(self.target.split(".")[1:]))
@@ -127,65 +145,36 @@ class WuKong(object):
 
             _regex = re.compile(r'(?<=<a href\="domain.php\?q=).*?(?=">)')
             for sub in _regex.findall(content):
-                if is_domain(sub):
-                    self.result["bug_detail"].append(sub) 	#保存结果
+                if is_Domain(sub):
+                    self.result["bug_detail"].append(sub)
 
             return list(set(self.result))
-        except Exception as e:
-            return 0
+        except:
+            pass
+
+''' local test '''            
+# test = WuKong(target ='www.aliyun.com',args = {"cookies":"" , "user_pass": "" , "args" : "www" })
+# test.exploit()
+# print test.result 
 
 ```
 
 
+## Update
 
-## Usage(使用方式)
-```
-- 配置supervisor的启动项
-- 修改core/settings.py 文件配置信息
+| Python version| Wukong Agent version | Link |
+| :---:         | :---:          | :--: |
+| 2.7.3  		| 1.0  			 | [v1](https://github.com/Canbing007/wukong) |
 
-agent端运行以下命令:
-celery flower --port=8080 --broker=redis://127.0.0.1:6379/0 --basic_auth=talsec:talsec@flower
-celery -A tasks worker --loglevel=info --workdir=/root/test --concurrency=10
+please waiting for update
 
+## Contribute
 
-docker 运行方式:
-docker run -d -v /mnt/:/tmp/ -p 222:22 -p 6379:6379 -p 9001:9001 -p 8080:8080 wukong
+If you want to contribute to my project please don't hesitate to send a pull request. You can also join our users, by sending an email to [me](mailto:wulitouhaha@vip.qq.com), to ask questions and participate in discussions.
 
 
-必须设置一个启动supervisord的脚本；并配置supervisord
-/tmp/Run.sh
-#!/bin/bash
-supervisord -c '/tmp/supervisord_server.conf'
+## Issue
 
-如果想自定义启动的agent和redis可修改supervisord_server 配置
-
-
-
-
-提交任务扫描请求:
-curl -X POST -d '{"args":["taskid-23","www.baidu.com","test"]}' http://192.168.10.128:8080/api/task/send-task/tasks.custom_nmap_scan
-
-curl -X POST -d '{"args":["taskid-296","100.xueersi.com","subdomain"]}' http://192.168.10.128:8080/api/task/send-task/tasks.custom_poc_scan
-
-curl -X POST -d '{"args":["taskid-296","100.xueersi.com","subdomain"]}' http://192.168.10.128:8080/api/task/send-task/tasks.custom_brute_scan
-
-curl -X POST -d '{"args":["taskid-296","100.xueersi.com"]}' http://192.168.10.128:8080/api/task/send-task/tasks.nessus_scan
-
-curl -X POST -d '{"args":["taskid-296","100.xueersi.com",["email"]]}' http://192.168.10.128:8080/api/task/send-task/tasks.github_scan
-
-curl -X POST -d '{"args":["taskid-23","100.xueersi.com"]}' http://192.168.10.128:8080/api/task/send-task/tasks.awvs_scan
-
-强制结束一个正在执行的任务：
-curl -X POST -d 'terminate=True' http://192.168.10.128:8080/api/task/revoke/a9361c1b-fd1d-4f48-9be2-8656a57e906b
-
-
-```
-
-
-## Todo
-1.待编写web服务端   
-2.爆破模款(字典配置)和poc模块(cookie设置)调整
-
-
+if you hava some question or good idea,you can leave a message to me!
 
 

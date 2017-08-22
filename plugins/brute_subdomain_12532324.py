@@ -8,16 +8,21 @@
 import sys
 sys.path.append("..")
 
+
 from common.captcha import Captcha
-from common.wukong_Func import *
-from common.wukong_TypeCheck import *
+from common.func import *
+from common.check import *
+
 import dns.resolver
 
 
 class WuKong(object):
 	def __init__(self,  target = "", args = ""):
 		self.target = target
-		self.args = args
+		self.args = args["args"]
+		self.cookies = args["cookies"]
+		self.user_pass = args["user_pass"]
+		
 		self.result = {
 			"bug_author" : "bing",
 			"bug_name" : "brute subdomain script",
@@ -27,9 +32,8 @@ class WuKong(object):
 			"bug_repair" : "none"
 			}
 
-	def domain(self,test):
+	def verify(self,test):
 		try:
-			dns_server = ["114.114.114.114","114.114.115.115","180.76.76.76","223.5.5.5","223.6.6.6","8.8.8.8"]
 			my_resolver = dns.resolver.Resolver()
 			my_resolver.nameservers = ["114.114.114.114","114.114.115.115","180.76.76.76","223.5.5.5","223.6.6.6","8.8.8.8"]
 			target = str(test)
@@ -39,12 +43,12 @@ class WuKong(object):
 		except:
 			return ''
 
-	def run(self):
-		if is_domain(self.target) == False :
+	def exploit(self):
+		if is_Domain(self.target) == False :
 			return []
 		try:
 			target = str(self.args)+'.'+ str(".".join(self.target.split(".")[1:]))
-			result = self.domain(target)
+			result = self.verify(target)
 			if result == "":
 				pass
 			else:
@@ -53,6 +57,6 @@ class WuKong(object):
 			pass
 
 
-# netcraft = WuKong(target ='www.aliyun.com',args = 'www')
-# netcraft.run()
+# netcraft = WuKong(target ='www.aliyun.com',args = {"cookies":"" , "user_pass": "" , "args" : "www" })
+# netcraft.exploit()
 # print netcraft.result 

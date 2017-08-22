@@ -9,8 +9,9 @@ import sys
 sys.path.append("..")
 
 from common.captcha import Captcha
-from common.wukong_Func import *
-from common.wukong_TypeCheck import *
+from common.func import *
+from common.check import *
+
 import re,os
 
 class WuKong(object):

@@ -13,8 +13,8 @@ from splinter import Browser
 import dns.resolver
 
 from common.captcha import Captcha
-from common.wukong_Func import *
-from common.wukong_TypeCheck import *
+from common.func import *
+from common.check import *
 
 class WuKong(object):
 	def __init__(self,  target = "",args = ""):

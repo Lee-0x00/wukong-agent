@@ -1530,7 +1530,7 @@ bittorrent-tracker;6881/tcp;0.000640;# BitTorrent tracker
 muse;6888/tcp;0.000076;# MUSE
 jetstream;6901/tcp;0.000380;# Novell Jetstream messaging protocol
 afs3-fileserver;7000/tcp;0.001995;# file server itself, msdos
-afs3-callback;7001/tcp;0.000891;# callbacks to cache managers
+weblogic;7001/tcp;0.000891;# callbacks to cache managers
 afs3-prserver;7002/tcp;0.000351;# users & groups database
 afs3-vlserver;7003/tcp;0.000125;# volume location database
 afs3-kaserver;7004/tcp;0.000201;# AFS/Kerberos authentication service

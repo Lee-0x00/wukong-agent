@@ -9,14 +9,18 @@ import sys
 sys.path.append("..")
 
 from common.captcha import Captcha
-from common.wukong_Func import *
-from common.wukong_TypeCheck import *
-import requests,socket
+from common.func import *
+from common.check import *
+
+import socket
 
 class WuKong(object):
 	def __init__(self,  target = "",args = ""):
 		self.target = target
-		self.args = args
+		self.args = args["args"]
+		self.cookies = args["cookies"]
+		self.user_pass = args["user_pass"]
+		
 		self.port = 6379
 		self.result = {
 			"bug_author" : "bing",
@@ -28,27 +32,27 @@ class WuKong(object):
 			}
 
 
-	def run(self):
-		if is_domain(self.target) or is_host(self.target) :
-			try:
+	def exploit(self):
+		try:
+			s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+			s.settimeout(2)
+			#print self.target,int(self.port)
+			s.connect((self.target,int(self.port)))
+			s.send("INFO\r\n")
+			result = s.recv(1024)
+			if "redis_version" in result:
+				self.result["bug_detail"].append("unauthorized")
+			else:
 				s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-				#s.settimeout(0.1)
 				s.connect((self.target,int(self.port)))
-				s.send("INFO\r\n")
+				s.send("AUTH %s\r\n"%(self.args))
 				result = s.recv(1024)
-				if "redis_version" in result:
-				 	self.result["bug_detail"].append("unauthorized")
-				else:
-					s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-					s.connect((self.target,int(self.port)))
-					s.send("AUTH %s\r\n"%(self.args))
-					result = s.recv(1024)
-					if '+OK' in result:
-						self.result["bug_detail"].append(self.args)
-			except Exception,e:
-				pass
+				if '+OK' in result:
+					self.result["bug_detail"].append(self.args)
+		except Exception,e:
+			pass
 
 
-# t = BingScan(target="127.0.0.1",args = "1234" )
-# t.run()
-# print t.result
+# netcraft = WuKong(target ='127.0.0.1',args = {"cookies":"" , "user_pass": "" , "args" : "1234" })
+# netcraft.exploit()
+# print netcraft.result 

@@ -8,31 +8,25 @@ import sys
 sys.path.append("..")
 
 from common.captcha import Captcha
-from common.wukong_Func import *
-from common.wukong_TypeCheck import *
+from common.func import *
+from common.check import *
+
+import json,re,subprocess,time
+
 
 class WuKong(object):
-    def __init__(self,  target = ""):
+    def __init__(self,  target = "", args = ""):
         self.target = target
+        self.cookies = args["cookies"]
+        
         self.result = {
-        "bug_author" : "Bing",
-        "bug_name" : "Netcraft subdomain api",
-        "bug_summary" : "Subdomain search", 
-        "bug_level" : "Normal" , 
-        "bug_detail" : [] ,
-        "bug_repair" : "none"
+            "bug_author" : "Bing",
+            "bug_name" : "Netcraft subdomain api",
+            "bug_summary" : "Subdomain search", 
+            "bug_level" : "Normal" , 
+            "bug_detail" : [] ,
+            "bug_repair" : "none"
         }
-
-    def run(self):
-        if is_domain(self.target) == False :
-            return []
-        target = '.'.join(self.target.split(".")[1:])
-        try:
-            self.fetch_chinaz(target)
-            self.fetch_alexa_cn(target)
-            return list(set(self.result))
-        except Exception as e:
-            return 0
 
     def fetch_chinaz(self,target):
         url = 'http://alexa.chinaz.com/?domain={0}'.format(target )
@@ -40,7 +34,7 @@ class WuKong(object):
         subs = re.compile(r'(?<="\>\r\n<li>).*?(?=</li>)')
         result = subs.findall(r)
         for sub in result:
-            if is_domain(sub):
+            if is_Domain(sub):
                 self.result["bug_detail"].append(sub)
 
     def fetch_alexa_cn(self,target):
@@ -66,7 +60,7 @@ class WuKong(object):
             else:
                 sub_name = sub.split(':')[0:1][0]
                 sub_name = ''.join((sub_name.split(pre_domain)[0], domain))
-                if is_domain(sub_name):
+                if is_Domain(sub_name):
                     self.result.append(sub_name)
 
     def get_sign_alexa_cn(self,target):
@@ -78,6 +72,18 @@ class WuKong(object):
         else:
             return None
 
-# netcraft = WuKong(target ='www.lagou.com')
-# netcraft.run()
-# print netcraft.result
+    def exploit(self):
+        if is_Domain(self.target) == False :
+            return []
+        target = '.'.join(self.target.split(".")[1:])
+        try:
+            self.fetch_chinaz(target)
+            self.fetch_alexa_cn(target)
+            return list(set(self.result))
+        except:
+            pass
+        
+        
+# netcraft = WuKong(target ='www.aliyun.com',args = {"cookies":"" , "user_pass": "" , "args" : "www" })
+# netcraft.exploit()
+# print netcraft.result 

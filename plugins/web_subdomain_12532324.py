@@ -9,35 +9,27 @@ import sys
 sys.path.append("..")
 
 from common.captcha import Captcha
-from common.wukong_Func import *
-from common.wukong_TypeCheck import *
+from common.func import *
+from common.check import *
+
+import json,re,subprocess,time
 
 
 class WuKong(object):
-    def __init__(self,  target = "" ):
+    def __init__(self,  target = "", args = ""):
         self.target = target
+        self.cookies = args["cookies"]
+        
         self.result = []
         self.captcha = Captcha()
         self.result = {
-        "bug_author" : "Bing",
-        "bug_name" : "Sitedossier subdomain api",
-        "bug_summary" : "Subdomain search", 
-        "bug_level" : "Normal" , 
-        "bug_detail" : [] ,
-        "bug_repair" : "none"
+            "bug_author" : "Bing",
+            "bug_name" : "Sitedossier subdomain api",
+            "bug_summary" : "Subdomain search", 
+            "bug_level" : "Normal" , 
+            "bug_detail" : [] ,
+            "bug_repair" : "none"
         }
-
-    def run(self):
-        if is_domain(self.target) == False :
-            return []
-        target = '.'.join(self.target.split(".")[1:])
-        try:
-            url = 'http://www.sitedossier.com/parentdomain/{0}'.format(target )
-            r = self.get_content(url)
-            self.parser(r)
-            return list(set(self.result))
-        except Exception, e:
-            return 0
 
     def get_content(self, url):
         r = http_request_get(url).text
@@ -96,6 +88,18 @@ class WuKong(object):
         handler = lambda e: str(e)
         return json.dumps(self, indent=2, default=handler)
 
-# netcraft = WuKong(target ='www.aliyun.com')
-# netcraft.run()
-# print netcraft.result
+    def exploit(self):
+        if is_Domain(self.target) == False :
+            return []
+        target = '.'.join(self.target.split(".")[1:])
+        try:
+            url = 'http://www.sitedossier.com/parentdomain/{0}'.format(target )
+            r = self.get_content(url)
+            self.parser(r)
+            return list(set(self.result))
+        except:
+            pass
+        
+# netcraft = WuKong(target ='www.aliyun.com',args = {"cookies":"" , "user_pass": "" , "args" : "www" })
+# netcraft.exploit()
+# print netcraft.result 
