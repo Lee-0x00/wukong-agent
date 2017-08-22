@@ -1,5 +1,9 @@
 # Wukong Scanner Agent v1
----
+
+[![License](https://img.shields.io/:license-gpl3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
+[![platform](https://img.shields.io/badge/platform-osx%2Flinux%2Fwindows-green.svg)](https://github.com/Canbing007/wukong-agent)
+[![python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/)
+[![Code Issues](https://www.quantifiedcode.com/api/v1/project/e4b6f19e8a3f410f9bc70c42350ea20d/badge.svg)](https://www.quantifiedcode.com/app/project/e4b6f19e8a3f410f9bc70c42350ea20d)
 
 ## Requisites
 
@@ -23,7 +27,6 @@
 	- brute :  System service account password burst test    
 	- web : System web service vulnerability test   
 	- pscan : Port scans
-
 - Custom plug-in  
 - It can distributed deployment  
 - It access to third-party scanning tools
@@ -31,7 +34,7 @@
 
 ## Installation
 
-- modify setting.py as the following
+modify setting.py as the following
 ```
 redis_host = 'localhost'	#your redis address
 redis_port = 6379			#your redis port
@@ -48,21 +51,21 @@ redis_pwd = ''				#your redis password
 
 ## Usage
 
-- runing on the server
+#### runing on the server
 
 ```
 start server:
-celery -A tasks worker --loglevel=info --concurrency=10
-celery flower --port=8080 --broker=redis://127.0.0.1:6379/0
-#celery flower --port=8080 --broker=redis://:password@127.0.0.1:6379/0
-#celery flower --port=8080 --broker=redis://127.0.0.1:6379/0 --basic_auth=xx:xx
+    celery -A tasks worker --loglevel=info --concurrency=10
+    celery flower --port=8080 --broker=redis://127.0.0.1:6379/0
+    #celery flower --port=8080 --broker=redis://:password@127.0.0.1:6379/0
+    #celery flower --port=8080 --broker=redis://127.0.0.1:6379/0 --basic_auth=xx:xx
 
 send task:
-curl -X POST -d '{"args":["taskid-23","www.baidu.com"]}' http://127.0.0.1:8080/api/task/send-task/tasks.pscan
-curl -X POST -d '{"args":["taskid-23","www.baidu.com","web"]}' http://127.0.0.1:8080/api/task/send-task/tasks.brute
+    curl -X POST -d '{"args":["taskid-23","www.baidu.com"]}' http://127.0.0.1:8080/api/task/send-task/tasks.pscan
+    curl -X POST -d '{"args":["taskid-23","www.baidu.com","web"]}' http://127.0.0.1:8080/api/task/send-task/tasks.brute
 ```
 
-- runing on the console
+#### runing on the console
 
 ```
 python wukong.py -d 100.xueersi.com -m pscan    	#port scans
@@ -76,7 +79,7 @@ python wukong.py -d 100.xueersi.com -m brute -t subdomain 	#subdomain scans by b
 python wukong.py -d 100.xueersi.com -m all 		    #scan all the weaknesses
 ```
 
-- running screenshot as the following
+#### running screenshot as the following
 
 wukong agent console
 
@@ -164,7 +167,7 @@ class WuKong(object):
 
 | Python version| Wukong Agent version | Link |
 | :---:         | :---:          | :--: |
-| 2.7.3  		| 1.0  			 | [v1](https://github.com/Canbing007/wukong) |
+| 2.7.3  		| 1.0  			 | [v1](https://github.com/Canbing007/wukong-agent) |
 
 please waiting for update
 
