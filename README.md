@@ -3,7 +3,6 @@
 [![License](https://img.shields.io/:license-gpl3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0.html)
 [![platform](https://img.shields.io/badge/platform-osx%2Flinux%2Fwindows-green.svg)](https://github.com/Canbing007/wukong-agent)
 [![python](https://img.shields.io/badge/python-2.7-blue.svg)](https://www.python.org/downloads/)
-[![Code Issues](https://www.quantifiedcode.com/api/v1/project/e4b6f19e8a3f410f9bc70c42350ea20d/badge.svg)](https://www.quantifiedcode.com/app/project/e4b6f19e8a3f410f9bc70c42350ea20d)
 
 ## Requisites
 
