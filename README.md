@@ -159,6 +159,7 @@ class Exploit(WKExploit) :
 
 ![web server](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/scantask.png)  
 ![web server](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/scantask1.png)  
+![local control](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/console.png) 
 
 #### wukong web server[task report page]  
 
