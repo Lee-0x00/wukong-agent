@@ -1,5 +1,8 @@
 requests
 redis
+elasticsearch
+reportlab
+paramiko
 dnspython==1.15.0
 splinter==0.7.5
 celery==3.1.25
@@ -8,4 +11,3 @@ pygeoip==0.3.2
 gevent==1.2.1
 bs4==0.0.1
 beautifulsoup4==4.6.0
-MySQL-python==1.2.3
