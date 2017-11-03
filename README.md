@@ -152,6 +152,28 @@ class Exploit(WKExploit) :
 
 ```
 
+
+## Screen 
+
+#### wukong web server[add task page]
+
+![web server](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/scantask.png)  
+![web server](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/scantask1.png)  
+
+#### wukong web server[task report page]  
+
+![web server](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/report.png)  
+![web server](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/report1.png)  
+
+#### local pdf report  
+
+![pdf report](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/report2.png)  
+
+#### mail function  
+
+![mail report](https://raw.githubusercontent.com/Canbing007/wukong-agent/master/screen/mail.png)  
+
+
 ## Contribute
 
 If you want to contribute to my project please don't hesitate to send a pull request. You can also join our users, by sending an email to [me](mailto:wulitouhaha@vip.qq.com), to ask questions and participate in discussions.
