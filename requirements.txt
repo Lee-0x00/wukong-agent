@@ -2,6 +2,7 @@ requests
 redis
 elasticsearch
 reportlab
+psutil
 paramiko
 dnspython==1.15.0
 splinter==0.7.5
